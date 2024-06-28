@@ -1,0 +1,198 @@
+(export 
+    (version D)
+    (components
+        (comp
+            (ref D1)
+            (value LED)
+            (footprint lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC)
+            (tstamp 1)
+            (property
+                (name LCSC)
+                (value C3646923))
+            (property
+                (name faebryk_name)
+                (value "*.leds[0].led")))
+        (comp
+            (ref D2)
+            (value LED)
+            (footprint lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC)
+            (tstamp 2)
+            (property
+                (name LCSC)
+                (value C3646923))
+            (property
+                (name faebryk_name)
+                (value "*.leds[1].led")))
+        (comp
+            (ref P1)
+            (value USB_Type_C_Receptacle_16_pin)
+            (footprint lcsc:USB-C-SMD_TYPE-C-6PIN-2MD-073)
+            (tstamp 3)
+            (property
+                (name LCSC)
+                (value C2765186))
+            (property
+                (name faebryk_name)
+                (value *.usb_psu.usb)))
+        (comp
+            (ref R1)
+            (value 5.1kΩ)
+            (footprint lcsc:R0402)
+            (tstamp 4)
+            (property
+                (name LCSC)
+                (value C25905))
+            (property
+                (name faebryk_name)
+                (value "*.usb_psu.configuration_resistors[0]")))
+        (comp
+            (ref R2)
+            (value 5.1kΩ)
+            (footprint lcsc:R0402)
+            (tstamp 5)
+            (property
+                (name LCSC)
+                (value C25905))
+            (property
+                (name faebryk_name)
+                (value "*.usb_psu.configuration_resistors[1]")))
+        (comp
+            (ref R3)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 6)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.leds[0].current_limiting_resistor")))
+        (comp
+            (ref R4)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 7)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.leds[1].current_limiting_resistor"))))
+    (nets
+        (net
+            (code 1)
+            (name D1-1-R3-1)
+            (node
+                (ref D1)
+                (pin 1))
+            (node
+                (ref R3)
+                (pin 1)))
+        (net
+            (code 2)
+            (name D2-1-R4-1)
+            (node
+                (ref D2)
+                (pin 1))
+            (node
+                (ref R4)
+                (pin 1)))
+        (net
+            (code 3)
+            (name P1-10)
+            (node
+                (ref P1)
+                (pin 10)))
+        (net
+            (code 4)
+            (name P1-13-P1-14)
+            (node
+                (ref P1)
+                (pin 13))
+            (node
+                (ref P1)
+                (pin 14)))
+        (net
+            (code 5)
+            (name P1-3)
+            (node
+                (ref P1)
+                (pin 3)))
+        (net
+            (code 6)
+            (name P1-4-R1-1)
+            (node
+                (ref P1)
+                (pin 4))
+            (node
+                (ref R1)
+                (pin 1)))
+        (net
+            (code 7)
+            (name P1-5)
+            (node
+                (ref P1)
+                (pin 5)))
+        (net
+            (code 8)
+            (name P1-6)
+            (node
+                (ref P1)
+                (pin 6)))
+        (net
+            (code 9)
+            (name P1-7)
+            (node
+                (ref P1)
+                (pin 7)))
+        (net
+            (code 10)
+            (name P1-8)
+            (node
+                (ref P1)
+                (pin 8)))
+        (net
+            (code 11)
+            (name P1-9-R2-1)
+            (node
+                (ref P1)
+                (pin 9))
+            (node
+                (ref R2)
+                (pin 1)))
+        (net
+            (code 12)
+            (name gnd)
+            (node
+                (ref P1)
+                (pin 1))
+            (node
+                (ref P1)
+                (pin 12))
+            (node
+                (ref R1)
+                (pin 2))
+            (node
+                (ref R2)
+                (pin 2))
+            (node
+                (ref R3)
+                (pin 2))
+            (node
+                (ref R4)
+                (pin 2)))
+        (net
+            (code 13)
+            (name vbus)
+            (node
+                (ref D1)
+                (pin 2))
+            (node
+                (ref D2)
+                (pin 2))
+            (node
+                (ref P1)
+                (pin 11))
+            (node
+                (ref P1)
+                (pin 2)))))

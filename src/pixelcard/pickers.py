@@ -9,6 +9,9 @@ from faebryk.library.LED import LED
 from faebryk.library.Resistor import Resistor
 from faebryk.libs.picker.lcsc import LCSC_Part
 from faebryk.libs.picker.picker import PickerOption, pick_module_by_params
+from pixelcard.library.USB_Type_C_Receptacle_16_pin import (
+    USB_Type_C_Receptacle_16_pin,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -20,7 +23,6 @@ You can make use of faebryk's picker & parameter system to do this.
 # part pickers --------------------------------------------
 
 
-# Example
 def pick_resistor(resistor: Resistor):
     """
     Link a partnumber/footprint to a Resistor
@@ -87,11 +89,20 @@ def pick_resistor(resistor: Resistor):
     )
 
 
-# Example
 def pick_led(module: LED):
     pick_module_by_params(
         module,
         [
+            PickerOption(
+                part=LCSC_Part(partno="C3646923"),
+                params={
+                    "color": Constant(LED.Color.RED),
+                    "max_brightness": Constant(240e-3),
+                    "forward_voltage": Constant(2.1),
+                    "max_current": Constant(20e-3),
+                },
+                pinmap={"1": module.IFs.cathode, "2": module.IFs.anode},
+            ),
             PickerOption(
                 part=LCSC_Part(partno="C2286"),
                 params={
@@ -126,6 +137,31 @@ def pick(module: Module) -> bool:
         pick_resistor(module)
     elif isinstance(module, LED):
         pick_led(module)
+    elif isinstance(module, USB_Type_C_Receptacle_16_pin):
+        pick_module_by_params(
+            module,
+            [
+                PickerOption(
+                    part=LCSC_Part(partno="C2765186"),
+                    pinmap={
+                        "1": module.IFs.gnd[0],
+                        "2": module.IFs.vbus[0],
+                        "3": module.IFs.sbu2,
+                        "4": module.IFs.cc1,
+                        "5": module.IFs.d2.IFs.n,
+                        "6": module.IFs.d1.IFs.p,
+                        "7": module.IFs.d1.IFs.n,
+                        "8": module.IFs.d2.IFs.p,
+                        "9": module.IFs.cc2,
+                        "10": module.IFs.sbu1,
+                        "11": module.IFs.vbus[3],
+                        "12": module.IFs.gnd[3],
+                        "13": module.IFs.shield,
+                        "14": module.IFs.shield,
+                    },
+                ),
+            ],
+        )
     else:
         return False
 

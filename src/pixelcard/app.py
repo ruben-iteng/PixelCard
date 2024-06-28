@@ -3,34 +3,28 @@
 
 import logging
 
+import faebryk.library._F as F
 from faebryk.core.core import Module
+from faebryk.core.util import get_all_nodes
 from faebryk.library.has_overriden_name_defined import has_overriden_name_defined
 from faebryk.library.Net import Net
-from faebryk.libs.picker.picker import pick_part_recursively
-from pixelcard.library.my_library_module import MyLibraryModule
-from pixelcard.modules.my_application_module import MyApplicationModule
-from pixelcard.pickers import pick
+from faebryk.libs.brightness import TypicalLuminousIntensity
+from faebryk.libs.util import times
+from pixelcard.modules.USB_C_5V_PSU_16p_Receptical import USB_C_5V_PSU_16p_Receptical
 
 logger = logging.getLogger(__name__)
-
-"""
-This file is for the top-level application modules.
-This should be the entrypoint for collaborators to start in to understand your project.
-Treat it as the high-level design of your project.
-Avoid putting any generic or reusable application modules here.
-Avoid putting any low-level modules or parameter specializations here.
-"""
 
 
 class PixelCard(Module):
     def __init__(self) -> None:
         super().__init__()
 
-        # modules ------------------------------------
+        # ----------------------------------------
+        #     modules, interfaces, parameters
+        # ----------------------------------------
         class _NODEs(Module.NODES()):
-            submodule = MyApplicationModule()
-            my_part = MyLibraryModule()
-            ...
+            leds = times(2, F.PoweredLED)
+            usb_psu = USB_C_5V_PSU_16p_Receptical()
 
         self.NODEs = _NODEs(self)
 
@@ -38,21 +32,47 @@ class PixelCard(Module):
 
         self.PARAMs = _PARAMs(self)
 
-        # net names ----------------------------------
+        # ----------------------------------------
+        #                aliases
+        # ----------------------------------------
+        vbus = self.NODEs.usb_psu.IFs.power_out
+        gnd = self.NODEs.usb_psu.IFs.power_out.IFs.lv
+
+        # ----------------------------------------
+        #                net names
+        # ----------------------------------------
         nets = {
-            # "in_5v": ...power.IFs.hv,
-            # "gnd": ...power.IFs.lv,
+            "vbus": vbus.IFs.hv,
+            "gnd": gnd,
         }
         for net_name, mif in nets.items():
             net = Net()
             net.add_trait(has_overriden_name_defined(net_name))
             net.IFs.part_of.connect(mif)
 
-        # parametrization ----------------------------
+        # ----------------------------------------
+        #              connections
+        # ----------------------------------------
+        for led in self.NODEs.leds:
+            led.IFs.power.connect(vbus)
 
-        # specialize
+        # ----------------------------------------
+        #              parametrization
+        # ----------------------------------------
+        for pled in self.NODEs.leds:
+            pled.NODEs.led.PARAMs.brightness.merge(
+                TypicalLuminousIntensity.APPLICATION_LED_DECORATIVE_LIGHTING
+            )
+            pled.NODEs.led.PARAMs.color.merge(F.LED.Color.RED)
 
-        # set global params
-
-        # part picking -------------------------------
-        pick_part_recursively(self, pick)
+        # ----------------------------------------
+        #              specializations
+        # ----------------------------------------
+        for node in get_all_nodes(self):
+            if node.has_trait(F.is_decoupled):
+                # TODO do somewhere else
+                capacitance = (
+                    node.get_trait(F.is_decoupled).get_capacitor().PARAMs.capacitance
+                )
+                if isinstance(capacitance.get_most_narrow(), F.TBD):
+                    capacitance.merge(F.Constant(100e-9))

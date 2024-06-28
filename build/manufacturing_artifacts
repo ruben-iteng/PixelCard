@@ -1,0 +1,5 @@
+Designator,Footprint,Quantity,Value,Manufacturer,Partnumber,LCSC Part #
+"D1, D2",LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC,2,,,,C3646923
+P1,USB-C-SMD_TYPE-C-6PIN-2MD-073,1,,,,C2765186
+"R1, R2",R0402,2,5.1kΩ,,,C25905
+"R3, R4",R0402,2,100Ω,,,C25076
