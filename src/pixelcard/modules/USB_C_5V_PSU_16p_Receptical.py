@@ -101,18 +101,17 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                         ),
                         LayoutTypeHierarchy.Level(
                             mod_type=Resistor,
-                            layout=LayoutAbsolute(
-                                has_pcb_position.Point(
+                            layout=LayoutExtrude(
+                                base=has_pcb_position.Point(
                                     (
                                         4.75,
                                         -1.25,
                                         90,
                                         has_pcb_position.layer_type.NONE,
                                     )
-                                )
+                                ),
+                                vector=(0, 2.5),
                             ),
-                            collective=True,
-                            children_layout=LayoutExtrude((0, 2.5)),
                         ),
                     ]
                 )
