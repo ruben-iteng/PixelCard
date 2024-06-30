@@ -62,7 +62,7 @@ class LEDText(Module):
                                 mod_type=LED,
                                 layout=LayoutAbsolute(
                                     has_pcb_position.Point(
-                                        (0, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
+                                        (0, 0, 0, has_pcb_position.layer_type.NONE)
                                     )
                                 ),
                             ),
@@ -74,7 +74,7 @@ class LEDText(Module):
                                             0,
                                             1,
                                             180,
-                                            has_pcb_position.layer_type.TOP_LAYER,
+                                            has_pcb_position.layer_type.NONE,
                                         )
                                     )
                                 ),

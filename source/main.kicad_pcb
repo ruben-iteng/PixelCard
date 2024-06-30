@@ -181,7 +181,7 @@
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "00dd04a4-fa40-429b-a75f-c09bfea6cd37")
-        (at 4.61 -3.43 180)
+        (at 4.611111111111111 -1.4272727272727272 180)
         (property "Reference" "R22"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -421,11 +421,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "35")))
+            (tstamp "35"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "38"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "59")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "07433ea0-ee0e-48d0-ad3d-46cbdbc7aa39")
-        (at 54.11 -14.43 180)
+        (at 54.111111111111114 -12.427272727272728 180)
         (property "Reference" "R21"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -665,11 +681,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "16")))
+            (tstamp "16"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "10"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "31")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "07b0a0b7-3892-435e-96d4-00192781c2f9")
-        (at 49.61 -2.43 0)
+        (at 49.611111111111114 -2.4272727272727272 0)
         (property "Reference" "D15"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -909,11 +941,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "52")))
+            (tstamp "52"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "46"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "13")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "08785cd9-f0da-437a-86f1-22b87a9d79d3")
-        (at 16.41 -1.52 0)
+        (at 16.406400966183575 -1.522562582345191 0)
         (property "Reference" "D29"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -1153,11 +1201,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "5")))
+            (tstamp "5"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "60"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "23")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "0fb80cdd-0ebc-466b-9dfb-e3c887e1a82e")
-        (at 16.41 -2.52 180)
+        (at 16.406400966183575 -0.5225625823451909 180)
         (property "Reference" "R29"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -1397,11 +1461,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "2")))
+            (tstamp "2"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "4"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "20")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "160e2131-5d0d-4769-a5fc-9f1e8c734e4a")
-        (at 9.11 -14.43 180)
+        (at 9.11111111111111 -12.427272727272728 180)
         (property "Reference" "R28"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -1641,11 +1721,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "14")))
+            (tstamp "14"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "57"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "27")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "1ac2c6bb-0405-4726-a99a-024665099fe6")
-        (at 16.41 -6.92 180)
+        (at 16.406400966183575 -4.922562582345192 180)
         (property "Reference" "R3"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -1885,11 +1981,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "39")))
+            (tstamp "39"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "50"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "54")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "1ea8adde-bb2f-4d0c-b947-938d75263d6a")
-        (at 49.61 -11.23 0)
+        (at 49.611111111111114 -11.227272727272727 0)
         (property "Reference" "D19"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -2129,11 +2241,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "38")))
+            (tstamp "38"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "30"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "51")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "23c23ffd-ff98-471a-b054-ffde77c0bcff")
-        (at 49.61 -9.03 0)
+        (at 49.611111111111114 -9.027272727272727 0)
         (property "Reference" "D18"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -2373,11 +2501,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "1")))
+            (tstamp "1"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "56"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "19")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "242f4997-d49c-41c7-8520-e2db9a214c21")
-        (at 0.11 -14.43 180)
+        (at 0.1111111111111111 -12.427272727272728 180)
         (property "Reference" "R1"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -2617,11 +2761,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "60")))
+            (tstamp "60"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "35"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "41")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "261ca7ee-145d-4837-a908-fa38f69ac936")
-        (at 4.61 -0.23 0)
+        (at 4.611111111111111 -0.22727272727272727 0)
         (property "Reference" "D12"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -2861,11 +3021,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "23")))
+            (tstamp "23"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "23"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "52")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "2d758005-a4ab-46d3-8fde-6534af9f364b")
-        (at 0.11 -13.43 0)
+        (at 0.1111111111111111 -13.427272727272728 0)
         (property "Reference" "D1"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -3105,11 +3281,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "6")))
+            (tstamp "6"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "5"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "60")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "35ebe5af-2b97-4a09-8f35-8a53ab273110")
-        (at 4.61 -13.43 0)
+        (at 4.611111111111111 -13.427272727272728 0)
         (property "Reference" "D27"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -3349,11 +3541,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "34")))
+            (tstamp "34"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "27"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "50")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "370f8a19-809c-48d5-9a4b-db4d356bf4e0")
-        (at 49.61 -4.63 0)
+        (at 49.611111111111114 -4.627272727272728 0)
         (property "Reference" "D16"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -3593,11 +3801,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "22")))
+            (tstamp "22"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "16"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "37")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "39d9ed87-413a-4ed1-a3f5-94c8c45447ca")
-        (at 49.23 -84.35 180)
+        (at 86.85 58.73 180)
         (property "Reference" "R31"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -3797,11 +4021,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "58")))
+            (tstamp "58"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "43"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "16")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "3a310bd0-09dd-4f70-a5f4-bd5badbf6fdb")
-        (at 4.61 -6.83 0)
+        (at 4.611111111111111 -6.827272727272728 0)
         (property "Reference" "D24"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -4041,11 +4281,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "27")))
+            (tstamp "27"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "19"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "42")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "3ce28b9d-0032-42f3-b30c-14c766cb48ac")
-        (at 45.11 -13.43 0)
+        (at 45.111111111111114 -13.427272727272728 0)
         (property "Reference" "D13"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -4285,11 +4541,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "18")))
+            (tstamp "18"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "12"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "33")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "40462611-d28b-4ae1-bf2c-c5badaa93c08")
-        (at 9.11 -13.43 0)
+        (at 9.11111111111111 -13.427272727272728 0)
         (property "Reference" "D28"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -4529,11 +4801,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "28")))
+            (tstamp "28"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "20"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "44")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "40ce7c96-43f3-4b80-a9a3-61c1708d000d")
-        (at 20.91 -2.52 180)
+        (at 20.906400966183575 -0.5225625823451909 180)
         (property "Reference" "R7"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -4773,11 +5061,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "45")))
+            (tstamp "45"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "37"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "38")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "422e4ef7-c67d-447e-8779-a6966e3e8376")
-        (at 49.61 -6.83 0)
+        (at 49.611111111111114 -6.827272727272728 0)
         (property "Reference" "D17"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -5017,11 +5321,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "4")))
+            (tstamp "4"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "59"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "22")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "43d28f3f-f4dd-4905-9595-33c4d50b8b57")
-        (at 20.91 -8.12 0)
+        (at 20.906400966183575 -8.122562582345191 0)
         (property "Reference" "D8"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -5261,11 +5581,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "9")))
+            (tstamp "9"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "1"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "25")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "495faf53-4dfe-45b0-891f-59d82caa4f24")
-        (at 49.61 -5.63 180)
+        (at 49.611111111111114 -3.627272727272728 180)
         (property "Reference" "R16"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -5505,11 +5841,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "12")))
+            (tstamp "12"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "6"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "29")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "4c51c8a8-8958-4aa3-b839-b483ac054fc5")
-        (at 49.61 -10.03 180)
+        (at 49.611111111111114 -8.027272727272727 180)
         (property "Reference" "R18"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -5749,11 +6101,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "51")))
+            (tstamp "51"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "44"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "9")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "54980b38-c858-41e9-96e1-47b0df54fdfb")
-        (at 49.61 -14.43 180)
+        (at 49.611111111111114 -12.427272727272728 180)
         (property "Reference" "R20"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -5993,11 +6361,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "53")))
+            (tstamp "53"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "15"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "36")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "597df8ef-c4be-4e2f-8ce4-f0455c09e505")
-        (at 49.23 -84.35 180)
+        (at 86.85 58.73 180)
         (property "Reference" "R30"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -6197,11 +6581,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "0")))
+            (tstamp "0"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "39"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "6")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "5a170c4c-5cd4-4140-91de-ddf2f07f1173")
-        (at 16.41 -3.72 0)
+        (at 16.406400966183575 -3.722562582345191 0)
         (property "Reference" "D2"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -6441,11 +6841,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "3")))
+            (tstamp "3"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "58"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "21")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "62779b50-180d-415b-ad43-22540412aca6")
-        (at 54.11 -13.43 0)
+        (at 54.111111111111114 -13.427272727272728 0)
         (property "Reference" "D21"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -6685,11 +7101,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "31")))
+            (tstamp "31"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "24"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "47")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "6362ed5f-54ab-4866-b428-457f468075ab")
-        (at 4.61 -14.43 180)
+        (at 4.611111111111111 -12.427272727272728 180)
         (property "Reference" "R27"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -6929,11 +7361,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "56")))
+            (tstamp "56"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "45"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "5")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "636d10df-30d2-407d-bf13-a9a9aed002a6")
-        (at 49.61 -12.23 180)
+        (at 49.611111111111114 -10.227272727272727 180)
         (property "Reference" "R19"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -7173,11 +7621,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "17")))
+            (tstamp "17"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "11"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "32")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "67eed2ba-75fb-48cc-ba56-f3b42dd4c479")
-        (at 35.09 -8.309999999999999 180)
+        (at 35.091183574879224 -6.307345191040844 180)
         (property "Reference" "R11"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -7417,11 +7881,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "15")))
+            (tstamp "15"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "54"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "12")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "70fe2b71-f7a1-4fd8-8fe1-a77d9358e322")
-        (at 4.61 -7.83 180)
+        (at 4.611111111111111 -5.827272727272728 180)
         (property "Reference" "R24"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -7661,11 +8141,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "10")))
+            (tstamp "10"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "2"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "26")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "769ab47b-069f-4d98-89cb-0b47a1d2255e")
-        (at 16.41 -5.92 0)
+        (at 16.406400966183575 -5.922562582345192 0)
         (property "Reference" "D3"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -7905,11 +8401,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "24")))
+            (tstamp "24"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "47"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "11")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "77316e7c-656c-4731-9027-d53c090e1e0d")
-        (at 49.61 -7.83 180)
+        (at 49.611111111111114 -5.827272727272728 180)
         (property "Reference" "R17"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -8149,11 +8661,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "21")))
+            (tstamp "21"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "14"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "35")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "778ccc87-2eab-495f-b0c9-c3fe6a389f59")
-        (at 4.61 -4.63 0)
+        (at 4.611111111111111 -4.627272727272728 0)
         (property "Reference" "D23"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -8393,11 +8921,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "19")))
+            (tstamp "19"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "40"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "46")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "7b6346e6-6945-41e1-94e5-fc3b2070ad05")
-        (at 16.41 -8.12 0)
+        (at 16.406400966183575 -8.122562582345191 0)
         (property "Reference" "D4"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -8637,11 +9181,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "8")))
+            (tstamp "8"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "53"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "1")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "7c60f2bc-baa0-49ff-beeb-8d20f7fe0444")
-        (at 4.61 -2.43 0)
+        (at 4.611111111111111 -2.4272727272727272 0)
         (property "Reference" "D22"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -8881,11 +9441,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "50")))
+            (tstamp "50"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "55"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "18")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "7e8fbd1e-8024-4d3b-9001-c9a60a26b411")
-        (at 49.61 -3.43 180)
+        (at 49.611111111111114 -1.4272727272727272 180)
         (property "Reference" "R15"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -9125,11 +9701,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "46")))
+            (tstamp "46"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "7"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "4")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "7f0d989a-dcdb-43c6-b61a-1dbc89a5f541")
-        (at 35.09 -6.11 180)
+        (at 35.091183574879224 -4.107345191040844 180)
         (property "Reference" "R10"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -9369,11 +9961,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "29")))
+            (tstamp "29"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "21"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "45")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "809ba381-458f-4ba1-bf03-92c0c6eaf97b")
-        (at 16.41 -4.720000000000001 180)
+        (at 16.406400966183575 -2.722562582345191 180)
         (property "Reference" "R2"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -9613,11 +10221,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "42")))
+            (tstamp "42"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "33"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "57")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "8b6e0eff-96b4-44e0-a81f-8bca56da7b0f")
-        (at 20.91 -9.12 180)
+        (at 20.906400966183575 -7.122562582345191 180)
         (property "Reference" "R8"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -9857,11 +10481,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "40")))
+            (tstamp "40"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "31"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "55")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "8c21a7aa-de68-4c36-900c-6bdb6b6101f9")
-        (at 49.61 -0.23 0)
+        (at 49.611111111111114 -0.22727272727272727 0)
         (property "Reference" "D14"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -10101,11 +10741,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "41")))
+            (tstamp "41"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "32"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "56")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "906cc0da-74fe-48f9-bf5d-3c1acd2d6dfc")
-        (at 20.91 -13.52 180)
+        (at 20.906400966183575 -11.52256258234519 180)
         (property "Reference" "R9"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -10345,11 +11001,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "11")))
+            (tstamp "11"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "9"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "28")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "9980e7d7-20de-4cf1-936d-07c518ebcca9")
-        (at 4.61 -12.23 180)
+        (at 4.611111111111111 -10.227272727272727 180)
         (property "Reference" "R26"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -10589,11 +11261,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "20")))
+            (tstamp "20"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "13"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "34")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "9b2855c5-dca3-4ee3-908c-3025bc798436")
-        (at 16.41 -10.32 0)
+        (at 16.406400966183575 -10.32256258234519 0)
         (property "Reference" "D5"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -10833,11 +11521,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "25")))
+            (tstamp "25"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "17"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "39")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "a761977b-db55-4da0-b6df-c092588c64b8")
-        (at 20.91 -12.52 0)
+        (at 20.906400966183575 -12.52256258234519 0)
         (property "Reference" "D9"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -11077,11 +11781,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "48")))
+            (tstamp "48"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "41"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "2")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "b20d038f-1113-4742-8853-0669e86153b1")
-        (at 45.11 -14.43 180)
+        (at 45.111111111111114 -12.427272727272728 180)
         (property "Reference" "R13"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -11321,11 +12041,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "13")))
+            (tstamp "13"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "8"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "30")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "b565b038-d8e2-48a9-92f3-54202d01fe50")
-        (at 4.61 -11.23 0)
+        (at 4.611111111111111 -11.227272727272727 0)
         (property "Reference" "D26"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -11565,11 +12301,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "49")))
+            (tstamp "49"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "42"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "0")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "bc04bc1e-fb42-4be9-a67f-2d74a4e87afd")
-        (at 4.61 -10.03 180)
+        (at 4.611111111111111 -8.027272727272727 180)
         (property "Reference" "R25"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -11809,11 +12561,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "33")))
+            (tstamp "33"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "25"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "48")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "bdb0102a-e52b-4985-94fd-2702ba07e4c9")
-        (at 49.61 -1.23 180)
+        (at 49.611111111111114 0.7727272727272727 180)
         (property "Reference" "R14"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -12053,11 +12821,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "32")))
+            (tstamp "32"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "26"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "49")))
     (footprint "lcsc:USB-C-SMD_TYPE-C-6PIN-2MD-073"
         (layer "F.Cu")
         (uuid "c08fd23b-b816-4bf9-9fc3-87929d3af8f7")
-        (at 53.98 -85.6 90)
+        (at 85.6 53.98 90)
         (property "Reference" "P1"
             (at 0 -6.38 90)
             (layer "F.SilkS")
@@ -12381,11 +13165,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "44")))
+            (tstamp "44"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "36"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "40")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "c5230244-699f-473b-8546-0864ee218f92")
-        (at 4.61 -5.63 180)
+        (at 4.611111111111111 -3.627272727272728 180)
         (property "Reference" "R23"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -12625,11 +13425,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "30")))
+            (tstamp "30"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "0"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "7")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "c637cf52-72d8-4cf6-8454-d80313406f10")
-        (at 49.61 -13.43 0)
+        (at 49.611111111111114 -13.427272727272728 0)
         (property "Reference" "D20"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -12869,11 +13685,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "36")))
+            (tstamp "36"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "22"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "15")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "c8edf4df-97ed-47cc-9367-8e00d1ff62f2")
-        (at 16.41 -11.32 180)
+        (at 16.406400966183575 -9.32256258234519 180)
         (property "Reference" "R5"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -13113,11 +13945,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "43")))
+            (tstamp "43"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "34"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "58")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "c9304762-6009-4b67-a873-bcfc1439893d")
-        (at 16.41 -13.52 180)
+        (at 16.406400966183575 -11.52256258234519 180)
         (property "Reference" "R6"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -13357,11 +14205,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "7")))
+            (tstamp "7"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "3"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "24")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "d32ce193-42c9-4747-b603-4e5c118dd561")
-        (at 4.61 -1.23 180)
+        (at 4.611111111111111 0.7727272727272727 180)
         (property "Reference" "R12"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -13601,11 +14465,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "47")))
+            (tstamp "47"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "52"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "17")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "dd73c52c-aeae-4d9d-a335-d47097714079")
-        (at 20.91 -1.52 0)
+        (at 20.906400966183575 -1.522562582345191 0)
         (property "Reference" "D7"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -13845,11 +14725,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "37")))
+            (tstamp "37"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "29"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "53")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "e52e4af4-a928-4bed-9b2d-4232006671a2")
-        (at 4.61 -9.03 0)
+        (at 4.611111111111111 -9.027272727272727 0)
         (property "Reference" "D25"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -14089,11 +14985,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "55")))
+            (tstamp "55"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "49"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "3")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "e538fa26-fdf1-4da8-a008-01b028f2a8fe")
-        (at 16.41 -12.52 0)
+        (at 16.406400966183575 -12.52256258234519 0)
         (property "Reference" "D6"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -14333,11 +15245,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "59")))
+            (tstamp "59"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "51"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "14")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "ee4a31f5-948c-46ab-9c2e-13999e57688b")
-        (at 35.09 -5.11 0)
+        (at 35.091183574879224 -5.107345191040844 0)
         (property "Reference" "D10"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -14577,11 +15505,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "26")))
+            (tstamp "26"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "18"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "43")))
     (footprint "lcsc:R0402"
         (layer "F.Cu")
         (uuid "f0b6946b-83bf-446f-a69a-47a6734b14aa")
-        (at 16.41 -9.12 180)
+        (at 16.406400966183575 -7.122562582345191 180)
         (property "Reference" "R4"
             (at 0 -4 180)
             (layer "F.SilkS")
@@ -14821,11 +15765,27 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "54")))
+            (tstamp "54"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "48"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "10")))
     (footprint "lcsc:LED-SMD_L0.65-W0.35-P0.41_XL-0201SURC"
         (layer "F.Cu")
         (uuid "fbe336b0-325d-46d8-b631-3f1b3a6fee38")
-        (at 35.09 -7.31 0)
+        (at 35.091183574879224 -7.307345191040844 0)
         (property "Reference" "D11"
             (at 0 -4 0)
             (layer "F.SilkS")
@@ -15065,7 +16025,23 @@
                 (font
                     (size 0.125 0.125)
                     (thickness 0.01875)))
-            (tstamp "57")))
+            (tstamp "57"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "28"))
+        (fp_text user "FBRK:autoplaced"
+            (at 0 0 0)
+            (layer "User.5")
+            (effects
+                (font
+                    (size 0.125 0.125)
+                    (thickness 0.01875)))
+            (tstamp "8")))
     (gr_line
         (start 0 0)
         (end 0 53.98)
@@ -15073,7 +16049,7 @@
             (width 0.05)
             (type default))
         (layer "Edge.Cuts")
-        (tstamp "42359"))
+        (tstamp "95022"))
     (gr_line
         (start 0 53.98)
         (end 85.6 53.98)
@@ -15081,7 +16057,7 @@
             (width 0.05)
             (type default))
         (layer "Edge.Cuts")
-        (tstamp "15232"))
+        (tstamp "94396"))
     (gr_line
         (start 85.6 53.98)
         (end 85.6 0)
@@ -15089,7 +16065,7 @@
             (width 0.05)
             (type default))
         (layer "Edge.Cuts")
-        (tstamp "41765"))
+        (tstamp "43542"))
     (gr_line
         (start 85.6 0)
         (end 0 0)
@@ -15097,7 +16073,7 @@
             (width 0.05)
             (type default))
         (layer "Edge.Cuts")
-        (tstamp "96387"))
+        (tstamp "15726"))
     (gr_line
         (start 0 0)
         (end 0 0)
@@ -15105,4 +16081,4 @@
             (width 0.05)
             (type default))
         (layer "Edge.Cuts")
-        (tstamp "94549")))
+        (tstamp "27199")))

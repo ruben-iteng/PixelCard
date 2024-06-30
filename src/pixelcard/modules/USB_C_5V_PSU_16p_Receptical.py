@@ -74,7 +74,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                             mod_type=USB_Type_C_Receptacle_16_pin,
                             layout=LayoutAbsolute(
                                 has_pcb_position.Point(
-                                    (0, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
+                                    (0, 0, 0, has_pcb_position.layer_type.NONE)
                                 )
                             ),
                         ),
@@ -86,7 +86,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                                         4.75,
                                         2.4,
                                         90,
-                                        has_pcb_position.layer_type.TOP_LAYER,
+                                        has_pcb_position.layer_type.NONE,
                                     )
                                 )
                             ),
@@ -95,7 +95,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                             mod_type=Capacitor,
                             layout=LayoutAbsolute(
                                 has_pcb_position.Point(
-                                    (6, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
+                                    (6, 0, 0, has_pcb_position.layer_type.NONE)
                                 )
                             ),
                         ),
@@ -107,7 +107,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                                         4.75,
                                         -1.25,
                                         90,
-                                        has_pcb_position.layer_type.TOP_LAYER,
+                                        has_pcb_position.layer_type.NONE,
                                     )
                                 )
                             ),
