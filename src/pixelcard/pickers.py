@@ -4,7 +4,9 @@
 import logging
 
 from faebryk.core.core import Module
+from faebryk.library.Capacitor import Capacitor
 from faebryk.library.Constant import Constant
+from faebryk.library.Fuse import Fuse
 from faebryk.library.LED import LED
 from faebryk.library.Resistor import Resistor
 from faebryk.libs.picker.lcsc import LCSC_Part
@@ -94,10 +96,10 @@ def pick_led(module: LED):
         module,
         [
             PickerOption(
-                part=LCSC_Part(partno="C3646923"),
+                part=LCSC_Part(partno="C965790"),
                 params={
                     "color": Constant(LED.Color.RED),
-                    "max_brightness": Constant(240e-3),
+                    "max_brightness": Constant(300e-3),
                     "forward_voltage": Constant(2.1),
                     "max_current": Constant(20e-3),
                 },
@@ -127,6 +129,64 @@ def pick_led(module: LED):
     )
 
 
+def pick_capacitor(module: Capacitor):
+    """
+    Link a partnumber/footprint to a Capacitor
+
+    Uses 0402 when possible
+    """
+
+    pick_module_by_params(
+        module,
+        [
+            PickerOption(
+                part=LCSC_Part(partno="C1525"),
+                params={
+                    "temperature_coefficient": Constant(
+                        Capacitor.TemperatureCoefficient.X7R,
+                    ),
+                    "capacitance": Constant(100e-9),
+                    "rated_voltage": Constant(16),
+                },
+            ),
+            PickerOption(
+                part=LCSC_Part(partno="C19702"),
+                params={
+                    "temperature_coefficient": Constant(
+                        Capacitor.TemperatureCoefficient.X5R,
+                    ),
+                    "capacitance": Constant(10e-6),
+                    "rated_voltage": Constant(10),
+                },
+            ),
+        ],
+    )
+
+
+def pick_fuse(module: Fuse):
+    pick_module_by_params(
+        module,
+        [
+            PickerOption(
+                part=LCSC_Part(partno="C914087"),
+                params={
+                    "fuse_type": Constant(Fuse.FuseType.RESETTABLE),
+                    "response_type": Constant(Fuse.ResponseType.SLOW),
+                    "trip_current": Constant(1),
+                },
+            ),
+            PickerOption(
+                part=LCSC_Part(partno="C914085"),
+                params={
+                    "fuse_type": Constant(Fuse.FuseType.RESETTABLE),
+                    "response_type": Constant(Fuse.ResponseType.SLOW),
+                    "trip_current": Constant(0.5),
+                },
+            ),
+        ],
+    )
+
+
 # ----------------------------------------------------------
 
 
@@ -137,6 +197,10 @@ def pick(module: Module) -> bool:
         pick_resistor(module)
     elif isinstance(module, LED):
         pick_led(module)
+    elif isinstance(module, Capacitor):
+        pick_capacitor(module)
+    elif isinstance(module, Fuse):
+        pick_fuse(module)
     elif isinstance(module, USB_Type_C_Receptacle_16_pin):
         pick_module_by_params(
             module,

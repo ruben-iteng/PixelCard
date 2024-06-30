@@ -83,8 +83,8 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                             layout=LayoutAbsolute(
                                 has_pcb_position.Point(
                                     (
+                                        2.5,
                                         4.75,
-                                        2.4,
                                         90,
                                         has_pcb_position.layer_type.NONE,
                                     )
@@ -95,7 +95,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                             mod_type=Capacitor,
                             layout=LayoutAbsolute(
                                 has_pcb_position.Point(
-                                    (6, 0, 0, has_pcb_position.layer_type.NONE)
+                                    (0, 7, 0, has_pcb_position.layer_type.NONE)
                                 )
                             ),
                         ),
@@ -104,13 +104,13 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                             layout=LayoutExtrude(
                                 base=has_pcb_position.Point(
                                     (
-                                        4.75,
                                         -1.25,
+                                        4.75,
                                         90,
                                         has_pcb_position.layer_type.NONE,
                                     )
                                 ),
-                                vector=(0, 2.5),
+                                vector=(2.5, 0),
                             ),
                         ),
                     ]

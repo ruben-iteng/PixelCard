@@ -1,9 +1,11 @@
 from pathlib import Path
+from typing import Tuple
 
 from faebryk.core.core import Module
 from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
 from faebryk.exporters.pcb.layout.font import FontLayout
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
+from faebryk.library.Constant import Constant
 from faebryk.library.ElectricPower import ElectricPower
 from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
@@ -16,14 +18,18 @@ from faebryk.libs.util import times
 
 
 class LEDText(Module):
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        text: str,
+        char_dimensions: Tuple[float, float],
+    ) -> None:
         super().__init__()
 
         led_layout = FontLayout(
-            font=Font(Path("/usr/share/fonts/TTF/OpenSans-Bold.ttf")),
-            text="TEST",
-            char_dimensions=(10, 14),
-            resolution=(4.5, 1.1 * 2),
+            font=Font(Path("/usr/share/fonts/TTF/Pixeled.ttf")),
+            text=text,
+            char_dimensions=char_dimensions,
+            resolution=(4, 3),
             # bbox=(10, 14),
             kerning=5,
         )
@@ -42,6 +48,12 @@ class LEDText(Module):
             )
 
         self.NODEs = _NODES(self)
+
+        class _PARAMs(Module.PARAMS()):
+            width = Constant(char_dimensions[0] * len(text))
+            height = Constant(char_dimensions[1])
+
+        self.PARAMs = _PARAMs(self)
 
         for led in self.NODEs.leds:
             # TODO reenable

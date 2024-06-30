@@ -6,6 +6,7 @@ import logging
 from faebryk.core.core import Module
 from faebryk.library.has_overriden_name_defined import has_overriden_name_defined
 from faebryk.library.Net import Net
+from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
 from pixelcard.modules.USB_C_5V_PSU_16p_Receptical import USB_C_5V_PSU_16p_Receptical
 
@@ -20,8 +21,9 @@ class PixelCard(Module):
         #     modules, interfaces, parameters
         # ----------------------------------------
         class _NODEs(Module.NODES()):
-            text = LEDText()
+            text = LEDText(text="TEST", char_dimensions=(10, 14))
             usb_psu = USB_C_5V_PSU_16p_Receptical()
+            faebryk_logo = Faebryk_Logo()
 
         self.NODEs = _NODEs(self)
 
@@ -50,6 +52,7 @@ class PixelCard(Module):
         # ----------------------------------------
         #              connections
         # ----------------------------------------
+        # TODO reenable
         # self.NODEs.text.IFs.power.connect(vbus)
 
         # ----------------------------------------
