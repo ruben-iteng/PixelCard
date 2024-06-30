@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from faebryk.core.core import Module
+from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
 from faebryk.exporters.pcb.layout.font import FontLayout
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
 from faebryk.library.ElectricPower import ElectricPower
@@ -43,7 +44,8 @@ class LEDText(Module):
         self.NODEs = _NODES(self)
 
         for led in self.NODEs.leds:
-            led.IFs.power.connect(self.IFs.power)
+            # TODO reenable
+            # led.IFs.power.connect(self.IFs.power)
             # Parametrize
             led.NODEs.led.PARAMs.color.merge(LED.Color.RED)
             led.NODEs.led.PARAMs.brightness.merge(
@@ -58,14 +60,23 @@ class LEDText(Module):
                         layouts=[
                             LayoutTypeHierarchy.Level(
                                 mod_type=LED,
-                                position=has_pcb_position.Point(
-                                    (0, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
+                                layout=LayoutAbsolute(
+                                    has_pcb_position.Point(
+                                        (0, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
+                                    )
                                 ),
                             ),
                             LayoutTypeHierarchy.Level(
                                 mod_type=Resistor,
-                                position=has_pcb_position.Point(
-                                    (0, 1, 180, has_pcb_position.layer_type.TOP_LAYER)
+                                layout=LayoutAbsolute(
+                                    has_pcb_position.Point(
+                                        (
+                                            0,
+                                            1,
+                                            180,
+                                            has_pcb_position.layer_type.TOP_LAYER,
+                                        )
+                                    )
                                 ),
                             ),
                         ]

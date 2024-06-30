@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: MIT
 
 from faebryk.core.core import Module
+from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
+from faebryk.exporters.pcb.layout.extrude import LayoutExtrude
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
 from faebryk.library.can_be_decoupled import can_be_decoupled
 from faebryk.library.Capacitor import Capacitor
@@ -64,55 +66,55 @@ class USB_C_5V_PSU_16p_Receptical(Module):
         for gnd in self.NODEs.usb.IFs.gnd:
             gnd.connect(self.IFs.power_out.IFs.lv)
 
-        for i, resistor in enumerate(self.NODEs.configuration_resistors):
-            resistor.add_trait(
-                has_pcb_layout_defined(
-                    LayoutTypeHierarchy(
-                        layouts=[
-                            LayoutTypeHierarchy.Level(
-                                mod_type=Resistor,
-                                position=has_pcb_position.Point(
-                                    (
-                                        4.75,
-                                        -1.25 if i == 0 else 1.25,
-                                        90,
-                                        has_pcb_position.layer_type.TOP_LAYER,
-                                    )
-                                ),
-                            ),
-                        ]
-                    )
-                )
-            )
-        for node in self.NODEs.get_all():
-            node.add_trait(
-                has_pcb_layout_defined(
-                    LayoutTypeHierarchy(
-                        layouts=[
-                            LayoutTypeHierarchy.Level(
-                                mod_type=USB_Type_C_Receptacle_16_pin,
-                                position=has_pcb_position.Point(
+        self.add_trait(
+            has_pcb_layout_defined(
+                LayoutTypeHierarchy(
+                    layouts=[
+                        LayoutTypeHierarchy.Level(
+                            mod_type=USB_Type_C_Receptacle_16_pin,
+                            layout=LayoutAbsolute(
+                                has_pcb_position.Point(
                                     (0, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
-                                ),
+                                )
                             ),
-                            LayoutTypeHierarchy.Level(
-                                mod_type=Fuse,
-                                position=has_pcb_position.Point(
+                        ),
+                        LayoutTypeHierarchy.Level(
+                            mod_type=Fuse,
+                            layout=LayoutAbsolute(
+                                has_pcb_position.Point(
                                     (
                                         4.75,
                                         2.4,
                                         90,
                                         has_pcb_position.layer_type.TOP_LAYER,
                                     )
-                                ),
+                                )
                             ),
-                            LayoutTypeHierarchy.Level(
-                                mod_type=Capacitor,
-                                position=has_pcb_position.Point(
+                        ),
+                        LayoutTypeHierarchy.Level(
+                            mod_type=Capacitor,
+                            layout=LayoutAbsolute(
+                                has_pcb_position.Point(
                                     (6, 0, 0, has_pcb_position.layer_type.TOP_LAYER)
-                                ),
+                                )
                             ),
-                        ]
-                    )
+                        ),
+                        LayoutTypeHierarchy.Level(
+                            mod_type=Resistor,
+                            layout=LayoutAbsolute(
+                                has_pcb_position.Point(
+                                    (
+                                        4.75,
+                                        -1.25,
+                                        90,
+                                        has_pcb_position.layer_type.TOP_LAYER,
+                                    )
+                                )
+                            ),
+                            collective=True,
+                            children_layout=LayoutExtrude((0, 2.5)),
+                        ),
+                    ]
                 )
             )
+        )

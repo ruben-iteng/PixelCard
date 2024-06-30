@@ -8,6 +8,7 @@ from faebryk.core.core import Module
 from faebryk.core.graph import Graph
 from faebryk.core.util import get_all_modules
 from faebryk.exporters.pcb.kicad.transformer import PCB_Transformer
+from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
 from faebryk.library.has_pcb_layout import has_pcb_layout
 from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
@@ -50,11 +51,13 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
         layouts=[
             LayoutTypeHierarchy.Level(
                 mod_type=LEDText,
-                position=Point((0, 0, 0, L.TOP_LAYER)),
+                layout=LayoutAbsolute(Point((0, 0, 0, L.TOP_LAYER))),
             ),
             LayoutTypeHierarchy.Level(
                 mod_type=USB_C_5V_PSU_16p_Receptical,
-                position=Point((creditcard_width, creditcard_height, 90, L.TOP_LAYER)),
+                layout=LayoutAbsolute(
+                    Point((creditcard_width, creditcard_height, 90, L.TOP_LAYER))
+                ),
             ),
         ]
     )

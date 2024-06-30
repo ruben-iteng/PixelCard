@@ -92,18 +92,20 @@ def main(
     simple_erc(G)
 
     # netlist -----------------------------------------------
+    changed = False
     if netlist_export:
         logger.info(f"Writing netlist to {netlist_path}")
-        write_netlist(G, netlist_path, use_kicad_designators=True)
+        changed = write_netlist(G, netlist_path, use_kicad_designators=True)
 
     # pcb ----------------------------------------------------
     if pcb_transform:
-        print(
-            "Open the PCB in kicad and import the netlist.\n"
-            "Then save the pcb and press ENTER.\n"
-            f"PCB location: {pcbfile}"
-        )
-        input()
+        if changed:
+            print(
+                "Open the PCB in kicad and import the netlist.\n"
+                "Then save the pcb and press ENTER.\n"
+                f"PCB location: {pcbfile}"
+            )
+            input()
 
         logger.info("Transform PCB")
         transform_pcb(pcbfile, G, app)
