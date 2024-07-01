@@ -36,14 +36,13 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
     # create pcb outline in shape of a credit card
     creditcard_width = 85.6
     creditcard_height = 53.98
+
     transformer.set_pcb_outline_complex(
-        transformer.set_dimensions_rectangle(
+        transformer.create_rectangular_edgecut(
             width_mm=creditcard_width,
             height_mm=creditcard_height,
-            # origin_x_mm=0,
-            # origin_y_mm=0,
             rounded_corners=True,
-            corner_radius_mm=3,
+            corner_radius_mm=3.18,
         ),
         remove_existing_outline=True,
     )
