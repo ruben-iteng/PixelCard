@@ -79,12 +79,12 @@ def main(
 
     # fill unspecified parameters ----------------------------
     logger.info("Filling unspecified parameters")
-    import faebryk.libs.app.parameters as p_mod
+    # import faebryk.libs.app.parameters as p_mod
 
-    lvl = p_mod.logger.getEffectiveLevel()
-    p_mod.logger.setLevel(logging.DEBUG)
+    # lvl = p_mod.logger.getEffectiveLevel()
+    # p_mod.logger.setLevel(logging.DEBUG)
     replace_tbd_with_any(app, recursive=True)
-    p_mod.logger.setLevel(lvl)
+    # p_mod.logger.setLevel(lvl)
 
     # pick parts ---------------------------------------------
     pick_part_recursively(app, pick)

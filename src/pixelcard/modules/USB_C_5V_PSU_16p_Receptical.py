@@ -14,6 +14,9 @@ from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
 from faebryk.library.Range import Range
 from faebryk.library.Resistor import Resistor
+from faebryk.library.has_pcb_routing_strategy_greedy_direct_line import (
+    has_pcb_routing_strategy_greedy_direct_line,
+)
 from faebryk.libs.units import k
 from faebryk.libs.util import times
 from pixelcard.library.USB_Type_C_Receptacle_16_pin import (
@@ -85,7 +88,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                                     (
                                         2.5,
                                         4.75,
-                                        90,
+                                        -90,
                                         has_pcb_position.layer_type.NONE,
                                     )
                                 )
@@ -95,7 +98,7 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                             mod_type=Capacitor,
                             layout=LayoutAbsolute(
                                 has_pcb_position.Point(
-                                    (0, 7, 0, has_pcb_position.layer_type.NONE)
+                                    (0, 7, 180, has_pcb_position.layer_type.NONE)
                                 )
                             ),
                         ),
@@ -117,3 +120,5 @@ class USB_C_5V_PSU_16p_Receptical(Module):
                 )
             )
         )
+
+        self.add_trait(has_pcb_routing_strategy_greedy_direct_line())

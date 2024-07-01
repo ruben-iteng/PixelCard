@@ -9,6 +9,9 @@ from faebryk.library.Constant import Constant
 from faebryk.library.ElectricPower import ElectricPower
 from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
+from faebryk.library.has_pcb_routing_strategy_greedy_direct_line import (
+    has_pcb_routing_strategy_greedy_direct_line,
+)
 from faebryk.library.LED import LED
 from faebryk.library.PoweredLED import PoweredLED
 from faebryk.library.Resistor import Resistor
@@ -26,10 +29,10 @@ class LEDText(Module):
         super().__init__()
 
         led_layout = FontLayout(
-            font=Font(Path("/usr/share/fonts/TTF/Pixeled.ttf")),
+            font=Font(Path("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")),
             text=text,
             char_dimensions=char_dimensions,
-            resolution=(4, 3),
+            resolution=(2.4, 2.2),
             # bbox=(10, 14),
             kerning=5,
         )
@@ -74,7 +77,7 @@ class LEDText(Module):
                                 mod_type=LED,
                                 layout=LayoutAbsolute(
                                     has_pcb_position.Point(
-                                        (0, 0, 0, has_pcb_position.layer_type.NONE)
+                                        (0, 0, 90, has_pcb_position.layer_type.NONE)
                                     )
                                 ),
                             ),
@@ -83,9 +86,9 @@ class LEDText(Module):
                                 layout=LayoutAbsolute(
                                     has_pcb_position.Point(
                                         (
+                                            1.1,
                                             0,
-                                            1,
-                                            180,
+                                            -90,
                                             has_pcb_position.layer_type.NONE,
                                         )
                                     )
@@ -95,5 +98,7 @@ class LEDText(Module):
                     )
                 )
             )
+
+            led.add_trait(has_pcb_routing_strategy_greedy_direct_line())
 
         led_layout.apply(*self.NODEs.leds)

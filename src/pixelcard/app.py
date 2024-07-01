@@ -21,7 +21,7 @@ class PixelCard(Module):
         #     modules, interfaces, parameters
         # ----------------------------------------
         class _NODEs(Module.NODES()):
-            text = LEDText(text="TEST", char_dimensions=(10, 14))
+            text = LEDText(text="F", char_dimensions=(10, 14))
             usb_psu = USB_C_5V_PSU_16p_Receptical()
             faebryk_logo = Faebryk_Logo()
 

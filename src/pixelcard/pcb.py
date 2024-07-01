@@ -14,7 +14,7 @@ from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
 from faebryk.library.has_pcb_position_defined import has_pcb_position_defined
 from faebryk.library.LED import LED
-from faebryk.libs.app.pcb import apply_layouts
+from faebryk.libs.app.pcb import apply_layouts, apply_routing
 from faebryk.libs.kicad.pcb import PCB
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
@@ -140,6 +140,8 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
     # apply layout
     apply_layouts(app)
     transformer.move_footprints()
+
+    apply_routing(app, transformer)
 
     logger.info(f"Writing pcbfile {pcb_file}")
     pcb.dump(pcb_file)
