@@ -2,7 +2,7 @@
 
 # PixelCard
 
-<img height=300 title="Render" src="./build/visuals/3d.png"/>
+<img height=300 title="Render" src="./build/visuals/card_front.png"/><img height=300 title="Render" src="./build/visuals/card_back.png"/>
 <br/>
 
 Business card generator with lots of blinky lights - PixelCard
