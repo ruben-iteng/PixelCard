@@ -14,7 +14,7 @@ from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
 from faebryk.library.has_pcb_position_defined import has_pcb_position_defined
 from faebryk.libs.app.pcb import apply_layouts, apply_routing
-from faebryk.libs.kicad.pcb import PCB, UUID, At, Font, GR_Text
+from faebryk.libs.kicad.pcb import PCB, UUID, At, Font, GR_Text, Zone
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
 from pixelcard.modules.USB_C_5V_PSU_16p_Receptical import USB_C_5V_PSU_16p_Receptical
@@ -74,6 +74,25 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
             uuid=UUID.factory(),
         )
     )
+
+    # generate top copper pour with NET "GND" and bottom copper pour with NET "VBUS"
+    offset = 5
+    if False:
+        transformer.pcb.append(
+            Zone.factory(
+                net=5,
+                net_name="gnd",
+                layer="F.Cu",
+                uuid=UUID.factory(),
+                name="GND",
+                polygon=[
+                    (-offset, -offset),
+                    (-offset, creditcard_height + offset),
+                    (creditcard_width + offset, creditcard_height + offset),
+                    (creditcard_width + offset, -offset),
+                ],
+            )
+        )
 
     # ----------------------------------------
     #                   Layout
