@@ -6,6 +6,7 @@ import logging
 from faebryk.core.core import Module
 from faebryk.library.has_overriden_name_defined import has_overriden_name_defined
 from faebryk.library.Net import Net
+from faebryk.libs.font import Font
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
 from pixelcard.modules.USB_C_5V_PSU_16p_Receptical import USB_C_5V_PSU_16p_Receptical
@@ -14,14 +15,20 @@ logger = logging.getLogger(__name__)
 
 
 class PixelCard(Module):
-    def __init__(self, _text: str = "REPLACE") -> None:
+    def __init__(
+        self, font: Font, _text: str = "REPLACE", contact_info: str = ""
+    ) -> None:
         super().__init__()
+
+        self.text = _text
+        self.contact_info = contact_info
+        self.font = font
 
         # ----------------------------------------
         #     modules, interfaces, parameters
         # ----------------------------------------
         class _NODEs(Module.NODES()):
-            text = LEDText(text=_text, char_dimensions=(10, 14))
+            text = LEDText(text=_text, char_dimensions=(10 * 1.5, 14 * 1.5), font=font)
             usb_psu = USB_C_5V_PSU_16p_Receptical()
             faebryk_logo = Faebryk_Logo()
 

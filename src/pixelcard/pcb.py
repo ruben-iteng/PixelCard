@@ -4,7 +4,6 @@
 import logging
 from pathlib import Path
 
-from faebryk.core.core import Module
 from faebryk.core.graph import Graph
 from faebryk.core.util import get_all_nodes
 from faebryk.exporters.pcb.kicad.transformer import PCB_Transformer
@@ -18,6 +17,7 @@ from faebryk.library.has_pcb_routing_strategy_via_to_layer import (
 )
 from faebryk.libs.app.pcb import apply_layouts, apply_routing
 from faebryk.libs.kicad.pcb import PCB, At, Font
+from pixelcard.app import PixelCard
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
 from pixelcard.modules.USB_C_5V_PSU_16p_Receptical import USB_C_5V_PSU_16p_Receptical
@@ -30,7 +30,7 @@ E.g placing components, layer switching, mass renaming, etc.
 """
 
 
-def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
+def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
     logger.info("Load PCB")
     pcb = PCB.load(pcb_file)
     transformer = PCB_Transformer(pcb, graph, app)
@@ -61,18 +61,33 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
         f.reference.at.coord = (2.25, 0, 0)
         f.reference.font = Font.factory(size=(0.5, 0.5), thickness=0.1)  # 0.075)
 
+    font = app.font
+    font_name = font.path.stem
+
     # add text as silkscreen
-    text = "PixelCard"
     transformer.insert_text(
-        text=text,
-        at=At.factory((creditcard_width / 2, creditcard_height / 2)),
+        text=app.text,
+        at=At.factory((0, 0)),
         font=Font.factory(
             size=(5, 5),
             thickness=0.2,
             bold=False,
-            face=str(Path("OpenSans-Bold.ttf")),
+            face=font_name,
         ),
     )
+
+    for i, line in enumerate(app.contact_info.split("\\n")):
+        transformer.insert_text(
+            text=line,
+            at=At.factory((creditcard_width / 2, creditcard_height / 2 + i * 5)),
+            font=Font.factory(
+                size=(2, 2),
+                thickness=0.1,
+                bold=False,
+                face=font_name,
+            ),
+            front=False,
+        )
 
     app.NODEs.net_vbus.add_trait(
         has_pcb_routing_strategy_via_to_layer(
@@ -95,7 +110,7 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
     # TODO: ugly
     for node in get_all_nodes(app):
         if isinstance(node, LEDText):
-            ledtext_width = node.PARAMs.width.value
+            # ledtext_width = node.PARAMs.width.value
             ledtext_height = node.PARAMs.height.value
     app.add_trait(
         has_pcb_layout_defined(
@@ -106,8 +121,8 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: Module):
                         layout=LayoutAbsolute(
                             Point(
                                 (
-                                    creditcard_width / 2 - ledtext_width / 2,
-                                    creditcard_height / 2 + ledtext_height / 2,
+                                    0,
+                                    0,
                                     0,
                                     L.NONE,
                                 )

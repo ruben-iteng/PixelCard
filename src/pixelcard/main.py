@@ -28,6 +28,7 @@ from faebryk.exporters.visualize.graph import render_matrix
 from faebryk.libs.app.erc import simple_erc
 from faebryk.libs.app.kicad_netlist import write_netlist
 from faebryk.libs.app.parameters import replace_tbd_with_any
+from faebryk.libs.font import Font
 from faebryk.libs.logging import setup_basic_logging
 from faebryk.libs.picker.picker import pick_part_recursively
 from pixelcard.app import PixelCard
@@ -44,6 +45,7 @@ def main(
     visualize_graph: bool = typer.Option(False, help="Visualize the faebryk graph"),
     export_pcba_artifacts: bool = typer.Option(False, help="Export PCBA artifacts"),
     led_text: str = typer.Argument("PixelCard", help="Text to convert into LEDText."),
+    contact_info: str = typer.Argument(help="Your contact information."),
 ):
     # paths --------------------------------------------------
     build_dir = Path("./build")
@@ -62,7 +64,11 @@ def main(
     # graph --------------------------------------------------
     try:
         sys.setrecursionlimit(50000)  # TODO needs optimization
-        app = PixelCard(led_text)
+        app = PixelCard(
+            font=Font(Path("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")),
+            _text=led_text,
+            contact_info=contact_info,
+        )
     except RecursionError:
         logger.error("RECURSION ERROR ABORTING")
         return
