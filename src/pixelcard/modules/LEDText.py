@@ -32,7 +32,7 @@ class LEDText(Module):
             font=Font(Path("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")),
             text=text,
             char_dimensions=char_dimensions,
-            resolution=(0.5, 0.5),
+            resolution=(0.4, 0.35),
             # bbox=(10, 14),
             kerning=5,
         )
@@ -60,7 +60,7 @@ class LEDText(Module):
 
         for led in self.NODEs.leds:
             # TODO reenable
-            # led.IFs.power.connect(self.IFs.power)
+            led.IFs.power.connect(self.IFs.power)
             # Parametrize
             led.NODEs.led.PARAMs.color.merge(LED.Color.RED)
             led.NODEs.led.PARAMs.brightness.merge(
@@ -87,7 +87,7 @@ class LEDText(Module):
                                     has_pcb_position.Point(
                                         (
                                             1.1,
-                                            0,
+                                            -0.25,
                                             -90,
                                             has_pcb_position.layer_type.NONE,
                                         )

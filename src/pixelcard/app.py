@@ -5,6 +5,9 @@ import logging
 
 from faebryk.core.core import Module
 from faebryk.library.has_overriden_name_defined import has_overriden_name_defined
+from faebryk.library.has_pcb_routing_strategy_via_to_layer import (
+    has_pcb_routing_strategy_via_to_layer,
+)
 from faebryk.library.Net import Net
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
@@ -48,6 +51,20 @@ class PixelCard(Module):
             net = Net()
             net.add_trait(has_overriden_name_defined(net_name))
             net.IFs.part_of.connect(mif)
+            setattr(self.NODEs, f"net_{net_name}", net)
+
+        self.NODEs.net_vbus.add_trait(
+            has_pcb_routing_strategy_via_to_layer(
+                "B.Cu",
+                (0.8, 0.3),
+            )
+        )
+        self.NODEs.net_gnd.add_trait(
+            has_pcb_routing_strategy_via_to_layer(
+                "F.Cu",
+                (0, 0),
+            )
+        )
 
         # ----------------------------------------
         #              connections
