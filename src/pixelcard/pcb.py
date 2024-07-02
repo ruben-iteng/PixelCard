@@ -2,7 +2,6 @@
 # SPDX-License-Identifier: MIT
 
 import logging
-import random
 from pathlib import Path
 
 from faebryk.core.core import Module

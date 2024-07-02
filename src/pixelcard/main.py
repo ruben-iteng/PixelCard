@@ -52,8 +52,8 @@ def main(
     netlist_path = faebryk_build_dir.joinpath("faebryk.net")
     kicad_prj_path = root.joinpath("source")
     pcbfile = kicad_prj_path.joinpath("main.kicad_pcb")
-    manufacturing_artifacts = build_dir.joinpath("manufacturing_artifacts")
-    cad_path = manufacturing_artifacts.joinpath("cad")
+    # manufacturing_artifacts = build_dir.joinpath("manufacturing_artifacts")
+    # cad_path = manufacturing_artifacts.joinpath("cad")
 
     lcsc.BUILD_FOLDER = build_dir
     lcsc.LIB_FOLDER = root.joinpath("libs")
