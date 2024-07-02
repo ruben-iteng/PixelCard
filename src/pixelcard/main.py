@@ -39,6 +39,23 @@ from pixelcard.pickers import pick
 logger = logging.getLogger(__name__)
 
 
+def get_font(font_path: Path, font_url: str):
+    if font_path.exists():
+        return
+
+    import zipfile
+    from io import BytesIO
+
+    import requests
+
+    r = requests.get(font_url)
+    zip_content = BytesIO(r.content)
+
+    # Extract the specific file from the zip into the desired location
+    with zipfile.ZipFile(zip_content, "r") as zip_ref:
+        zip_ref.extract(font_path.name, font_path.parent)
+
+
 def main(
     netlist_export: bool = typer.Option(True, help="Export the netlist"),
     pcb_transform: bool = typer.Option(True, help="Let faebryk transform the PCB"),
@@ -49,6 +66,7 @@ def main(
 ):
     # paths --------------------------------------------------
     build_dir = Path("./build")
+    font_cache_dir = build_dir / Path("cache") / Path("fonts")
     faebryk_build_dir = build_dir.joinpath("faebryk")
     faebryk_build_dir.mkdir(parents=True, exist_ok=True)
     root = Path(__file__).parent.parent.parent
@@ -61,11 +79,16 @@ def main(
     lcsc.BUILD_FOLDER = build_dir
     lcsc.LIB_FOLDER = root.joinpath("libs")
 
+    # Get font
+    font_path = font_cache_dir / Path("Minecraftia-Regular.ttf")
+    font_url = "https://dl.dafont.com/dl/?f=minecraftia"
+    get_font(font_path, font_url)
+
     # graph --------------------------------------------------
     try:
         sys.setrecursionlimit(50000)  # TODO needs optimization
         app = PixelCard(
-            font=Font(Path("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")),
+            font=Font(font_path),
             _text=led_text,
             contact_info=contact_info,
         )

@@ -63,18 +63,30 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
 
     font = app.font
     font_name = font.path.stem
+    bold = False
+    if "-Bold" in font_name:
+        font_name, _ = font_name.split("-Bold")
+        bold = True
 
+    TEXT_POS = (2, 2)
+
+    # TODO better trace actual font
     # add text as silkscreen
-    transformer.insert_text(
-        text=app.text,
-        at=At.factory((0, 0)),
-        font=Font.factory(
-            size=(5, 5),
-            thickness=0.2,
-            bold=False,
-            face=font_name,
-        ),
-    )
+    # transformer.insert_text(
+    #    text=app.text,
+    #    at=At.factory(
+    #        (
+    #            -2.5 + TEXT_POS[0],
+    #            0.5 + TEXT_POS[1],
+    #        )
+    #    ),
+    #    font=Font.factory(
+    #        size=app.NODEs.text.char_dimension,
+    #        thickness=0.2,
+    #        bold=bold,
+    #        face=font_name,
+    #    ),
+    # )
 
     for i, line in enumerate(app.contact_info.split("\\n")):
         transformer.insert_text(
@@ -83,7 +95,7 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
             font=Font.factory(
                 size=(2, 2),
                 thickness=0.1,
-                bold=False,
+                bold=bold,
                 face=font_name,
             ),
             front=False,
@@ -121,8 +133,8 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
                         layout=LayoutAbsolute(
                             Point(
                                 (
-                                    0,
-                                    0,
+                                    -7 + TEXT_POS[0],
+                                    1.5 + TEXT_POS[1],
                                     0,
                                     L.NONE,
                                 )
@@ -135,7 +147,7 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
                             Point(
                                 (
                                     creditcard_width - 4.5,
-                                    creditcard_height / 2,
+                                    2 * ledtext_height + 2.5,
                                     90,
                                     L.NONE,
                                 )

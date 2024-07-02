@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Tuple
 
 from faebryk.core.core import Module
@@ -30,7 +29,7 @@ class LEDText(Module):
         super().__init__()
 
         led_layout = FontLayout(
-            font=Font(Path("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")),
+            font=font,
             text=text,
             char_dimensions=char_dimensions,
             resolution=(0.33, 0.35),
@@ -39,6 +38,7 @@ class LEDText(Module):
         )
 
         num_leds = led_layout.get_count()
+        self.char_dimension = char_dimensions
 
         class _IFs(Module.IFS()):
             power = ElectricPower()

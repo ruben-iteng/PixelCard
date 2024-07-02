@@ -105,3 +105,5 @@ _local
 .local
 
 *.bak
+
+build/cache/fonts
