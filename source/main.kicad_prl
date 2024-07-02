@@ -1,12 +1,14 @@
 {
   "board": {
     "active_layer": 0,
-    "active_layer_preset": "All Layers",
-    "auto_track_width": true,
+    "active_layer_preset": "",
+    "auto_track_width": false,
+    "hidden_netclasses": [],
     "hidden_nets": [],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
+      "images": 0.6,
       "pads": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
@@ -18,7 +20,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": true,
+      "lockedItems": false,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -49,7 +51,6 @@
       21,
       22,
       23,
-      24,
       25,
       26,
       27,
@@ -62,8 +63,14 @@
       35,
       36
     ],
-    "visible_layers": "fffffff_ffffffff",
+    "visible_layers": "ffdffff_ffffffff",
     "zone_display_mode": 0
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "main.kicad_prl",

@@ -6,31 +6,31 @@ import logging
 from faebryk.core.core import Module
 from faebryk.library.has_overriden_name_defined import has_overriden_name_defined
 from faebryk.library.Net import Net
-from faebryk.libs.picker.picker import pick_part_recursively
-from pixelcard.library.my_library_module import MyLibraryModule
-from pixelcard.modules.my_application_module import MyApplicationModule
-from pixelcard.pickers import pick
+from faebryk.libs.font import Font
+from pixelcard.library.Faebryk_Logo import Faebryk_Logo
+from pixelcard.modules.LEDText import LEDText
+from pixelcard.modules.USB_C_5V_PSU_16p_Receptical import USB_C_5V_PSU_16p_Receptical
 
 logger = logging.getLogger(__name__)
 
-"""
-This file is for the top-level application modules.
-This should be the entrypoint for collaborators to start in to understand your project.
-Treat it as the high-level design of your project.
-Avoid putting any generic or reusable application modules here.
-Avoid putting any low-level modules or parameter specializations here.
-"""
-
 
 class PixelCard(Module):
-    def __init__(self) -> None:
+    def __init__(
+        self, font: Font, _text: str = "REPLACE", contact_info: str = ""
+    ) -> None:
         super().__init__()
 
-        # modules ------------------------------------
+        self.text = _text
+        self.contact_info = contact_info
+        self.font = font
+
+        # ----------------------------------------
+        #     modules, interfaces, parameters
+        # ----------------------------------------
         class _NODEs(Module.NODES()):
-            submodule = MyApplicationModule()
-            my_part = MyLibraryModule()
-            ...
+            text = LEDText(text=_text, char_dimensions=(10 * 1.5, 14 * 1.5), font=font)
+            usb_psu = USB_C_5V_PSU_16p_Receptical()
+            faebryk_logo = Faebryk_Logo()
 
         self.NODEs = _NODEs(self)
 
@@ -38,21 +38,42 @@ class PixelCard(Module):
 
         self.PARAMs = _PARAMs(self)
 
-        # net names ----------------------------------
+        # ----------------------------------------
+        #                aliases
+        # ----------------------------------------
+        vbus = self.NODEs.usb_psu.IFs.power_out
+        gnd = self.NODEs.usb_psu.IFs.power_out.IFs.lv
+
+        # ----------------------------------------
+        #                net names
+        # ----------------------------------------
         nets = {
-            # "in_5v": ...power.IFs.hv,
-            # "gnd": ...power.IFs.lv,
+            "vbus": vbus.IFs.hv,
+            "gnd": gnd,
         }
         for net_name, mif in nets.items():
             net = Net()
             net.add_trait(has_overriden_name_defined(net_name))
             net.IFs.part_of.connect(mif)
+            setattr(self.NODEs, f"net_{net_name}", net)
 
-        # parametrization ----------------------------
+        # ----------------------------------------
+        #              connections
+        # ----------------------------------------
+        self.NODEs.text.IFs.power.connect(vbus)
 
-        # specialize
+        # ----------------------------------------
+        #              parametrization
+        # ----------------------------------------
 
-        # set global params
-
-        # part picking -------------------------------
-        pick_part_recursively(self, pick)
+        # ----------------------------------------
+        #              specializations
+        # ----------------------------------------
+        # for node in get_all_nodes(self):
+        #    if node.has_trait(F.is_decoupled):
+        #        # TODO do somewhere else
+        #        capacitance = (
+        #            node.get_trait(F.is_decoupled).get_capacitor().PARAMs.capacitance
+        #        )
+        #        if isinstance(capacitance.get_most_narrow(), F.TBD):
+        #            capacitance.merge(F.Constant(100e-9))

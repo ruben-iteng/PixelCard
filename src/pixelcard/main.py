@@ -8,18 +8,27 @@ Afterwards it uses the graph to export to different artifacts (e.g netlist).
 """
 
 import logging
+import sys
 from pathlib import Path
 
 import faebryk.libs.picker.lcsc as lcsc
 import typer
-from faebryk.core.util import get_all_modules
-from faebryk.exporters.bom.jlcpcb import write_bom_jlcpcb
-from faebryk.exporters.pcb.kicad.transformer import PCB_Transformer
+
+# from faebryk.exporters.pcb.kicad.artifacts import (
+#    export_dxf,
+#    export_gerber,
+#    export_glb,
+#    export_pick_and_place,
+#    export_step,
+# )
+# from faebryk.exporters.pcb.pick_and_place.jlcpcb import (
+#    convert_kicad_pick_and_place_to_jlcpcb,
+# )
 from faebryk.exporters.visualize.graph import render_matrix
 from faebryk.libs.app.erc import simple_erc
 from faebryk.libs.app.kicad_netlist import write_netlist
 from faebryk.libs.app.parameters import replace_tbd_with_any
-from faebryk.libs.kicad.pcb import PCB
+from faebryk.libs.font import Font
 from faebryk.libs.logging import setup_basic_logging
 from faebryk.libs.picker.picker import pick_part_recursively
 from pixelcard.app import PixelCard
@@ -30,32 +39,66 @@ from pixelcard.pickers import pick
 logger = logging.getLogger(__name__)
 
 
+def get_font(font_path: Path, font_url: str):
+    if font_path.exists():
+        return
+
+    import zipfile
+    from io import BytesIO
+
+    import requests
+
+    r = requests.get(font_url)
+    zip_content = BytesIO(r.content)
+
+    # Extract the specific file from the zip into the desired location
+    with zipfile.ZipFile(zip_content, "r") as zip_ref:
+        zip_ref.extract(font_path.name, font_path.parent)
+
+
 def main(
-    nonetlist: bool = False,
-    nopcb: bool = False,
-    nobom: bool = False,
-    visualize: bool = False,
+    netlist_export: bool = typer.Option(True, help="Export the netlist"),
+    pcb_transform: bool = typer.Option(True, help="Let faebryk transform the PCB"),
+    visualize_graph: bool = typer.Option(False, help="Visualize the faebryk graph"),
+    export_pcba_artifacts: bool = typer.Option(False, help="Export PCBA artifacts"),
+    led_text: str = typer.Argument("PixelCard", help="Text to convert into LEDText."),
+    contact_info: str = typer.Argument(help="Your contact information."),
 ):
     # paths --------------------------------------------------
     build_dir = Path("./build")
+    font_cache_dir = build_dir / Path("cache") / Path("fonts")
     faebryk_build_dir = build_dir.joinpath("faebryk")
     faebryk_build_dir.mkdir(parents=True, exist_ok=True)
     root = Path(__file__).parent.parent.parent
     netlist_path = faebryk_build_dir.joinpath("faebryk.net")
     kicad_prj_path = root.joinpath("source")
     pcbfile = kicad_prj_path.joinpath("main.kicad_pcb")
-    manufacturing_artifacts = build_dir.joinpath("manufacturing_artifacts")
+    # manufacturing_artifacts = build_dir.joinpath("manufacturing_artifacts")
     # cad_path = manufacturing_artifacts.joinpath("cad")
 
     lcsc.BUILD_FOLDER = build_dir
     lcsc.LIB_FOLDER = root.joinpath("libs")
 
+    # Get font
+    font_path = font_cache_dir / Path("Minecraftia-Regular.ttf")
+    font_url = "https://dl.dafont.com/dl/?f=minecraftia"
+    get_font(font_path, font_url)
+
     # graph --------------------------------------------------
-    app = PixelCard()
+    try:
+        sys.setrecursionlimit(50000)  # TODO needs optimization
+        app = PixelCard(
+            font=Font(font_path),
+            _text=led_text,
+            contact_info=contact_info,
+        )
+    except RecursionError:
+        logger.error("RECURSION ERROR ABORTING")
+        return
     G = app.get_graph()
 
     # visualize ----------------------------------------------
-    if visualize:
+    if visualize_graph:
         render_matrix(
             G.G,
             nodes_rows=[],
@@ -66,12 +109,12 @@ def main(
 
     # fill unspecified parameters ----------------------------
     logger.info("Filling unspecified parameters")
-    import faebryk.libs.app.parameters as p_mod
+    # import faebryk.libs.app.parameters as p_mod
 
-    lvl = p_mod.logger.getEffectiveLevel()
-    p_mod.logger.setLevel(logging.DEBUG)
+    # lvl = p_mod.logger.getEffectiveLevel()
+    # p_mod.logger.setLevel(logging.DEBUG)
     replace_tbd_with_any(app, recursive=True)
-    p_mod.logger.setLevel(lvl)
+    # p_mod.logger.setLevel(lvl)
 
     # pick parts ---------------------------------------------
     pick_part_recursively(app, pick)
@@ -79,28 +122,46 @@ def main(
     simple_erc(G)
 
     # netlist -----------------------------------------------
-    if not nonetlist:
+    changed = False
+    if netlist_export:
         logger.info(f"Writing netlist to {netlist_path}")
-        write_netlist(G, netlist_path, use_kicad_designators=True)
+        changed = write_netlist(G, netlist_path, use_kicad_designators=True)
 
     # pcb ----------------------------------------------------
-    if not nopcb:
-        logger.info("Load PCB")
-        pcb = PCB.load(pcbfile)
-
-        transformer = PCB_Transformer(pcb, G, app)
+    if pcb_transform:
+        if changed:
+            print(
+                "Open the PCB in kicad and import the netlist.\n"
+                "Then save the pcb and press ENTER.\n"
+                f"PCB location: {pcbfile}"
+            )
+            input()
 
         logger.info("Transform PCB")
-        transform_pcb(transformer)
+        transform_pcb(pcbfile, G, app)
 
-        logger.info(f"Writing pcbfile {pcbfile}")
-        pcb.dump(pcbfile)
+        print("Reopen PCB in kicad")
+
     # ---------------------------------------------------------
 
-    # bom ----------------------------------------------------
-    if not nobom:
-        logger.info("Generating BOM")
-        write_bom_jlcpcb(get_all_modules(app), manufacturing_artifacts)
+    # generate pcba manufacturing and other artifacts ---------
+    # if export_pcba_artifacts:
+    #    logger.info("Exporting PCBA artifacts")
+    #    write_bom_jlcpcb(
+    #        get_all_modules(app), manufacturing_artifacts.joinpath("jlcpcb_bom.csv")
+    #    )
+    #    export_step(pcbfile, step_file=cad_path.joinpath("pcba.step"))
+    #    export_glb(pcbfile, glb_file=cad_path.joinpath("pcba.glb"))
+    #    export_dxf(pcbfile, dxf_file=cad_path.joinpath("pcba.dxf"))
+    #    export_gerber(
+    #        pcbfile, gerber_zip_file=manufacturing_artifacts.joinpath("gerber.zip")
+    #    )
+    #    pnp_file = manufacturing_artifacts.joinpath("pick_and_place.csv")
+    #    export_pick_and_place(pcbfile, pick_and_place_file=pnp_file)
+    #    convert_kicad_pick_and_place_to_jlcpcb(
+    #        pnp_file,
+    #        manufacturing_artifacts.joinpath("jlcpcb_pick_and_place.csv"),
+    #    )
 
 
 if __name__ == "__main__":

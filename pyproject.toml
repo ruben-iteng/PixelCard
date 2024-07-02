@@ -23,7 +23,7 @@ homepage = "https://github.com/ruben-iteng/pixelcard"
 
 [tool.poetry.dependencies]
 python = "^3.12,<3.13"                                                        # max allowed version by scipy
-faebryk = { git = "https://github.com/faebryk/faebryk.git", branch = "main" }
+faebryk = { git = "https://github.com/faebryk/faebryk.git", branch = "feature/fontlayout" }
 typer = { version = "^0.9.0", extras = ["all"] }
 
 [tool.poetry.group.dev.dependencies]
