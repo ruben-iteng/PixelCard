@@ -112,7 +112,7 @@
                 (name faebryk_name)
                 (value "*.text.leds[7].led")))
         (comp
-            (ref D2)
+            (ref D18)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
             (tstamp 11)
@@ -121,9 +121,9 @@
                 (value C965790))
             (property
                 (name faebryk_name)
-                (value "*.text.leds[10].led")))
+                (value "*.text.leds[17].led")))
         (comp
-            (ref D3)
+            (ref D19)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
             (tstamp 12)
@@ -132,9 +132,9 @@
                 (value C965790))
             (property
                 (name faebryk_name)
-                (value "*.text.leds[9].led")))
+                (value "*.text.leds[18].led")))
         (comp
-            (ref D4)
+            (ref D2)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
             (tstamp 13)
@@ -143,9 +143,9 @@
                 (value C965790))
             (property
                 (name faebryk_name)
-                (value "*.text.leds[8].led")))
+                (value "*.text.leds[10].led")))
         (comp
-            (ref D5)
+            (ref D20)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
             (tstamp 14)
@@ -154,9 +154,9 @@
                 (value C965790))
             (property
                 (name faebryk_name)
-                (value "*.text.leds[11].led")))
+                (value "*.text.leds[19].led")))
         (comp
-            (ref D6)
+            (ref D21)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
             (tstamp 15)
@@ -165,12 +165,518 @@
                 (value C965790))
             (property
                 (name faebryk_name)
+                (value "*.text.leds[20].led")))
+        (comp
+            (ref D22)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 16)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[21].led")))
+        (comp
+            (ref D23)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 17)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[22].led")))
+        (comp
+            (ref D24)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 18)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[23].led")))
+        (comp
+            (ref D25)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 19)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[24].led")))
+        (comp
+            (ref D26)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 20)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[25].led")))
+        (comp
+            (ref D27)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 21)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[26].led")))
+        (comp
+            (ref D28)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 22)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[27].led")))
+        (comp
+            (ref D29)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 23)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[28].led")))
+        (comp
+            (ref D3)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 24)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[9].led")))
+        (comp
+            (ref D30)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 25)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[29].led")))
+        (comp
+            (ref D31)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 26)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[30].led")))
+        (comp
+            (ref D32)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 27)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[31].led")))
+        (comp
+            (ref D33)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 28)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[32].led")))
+        (comp
+            (ref D34)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 29)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[33].led")))
+        (comp
+            (ref D35)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 30)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[34].led")))
+        (comp
+            (ref D36)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 31)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[35].led")))
+        (comp
+            (ref D37)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 32)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[36].led")))
+        (comp
+            (ref D38)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 33)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[37].led")))
+        (comp
+            (ref D39)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 34)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[38].led")))
+        (comp
+            (ref D4)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 35)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[8].led")))
+        (comp
+            (ref D40)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 36)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[39].led")))
+        (comp
+            (ref D41)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 37)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[40].led")))
+        (comp
+            (ref D42)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 38)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[41].led")))
+        (comp
+            (ref D43)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 39)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[42].led")))
+        (comp
+            (ref D44)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 40)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[43].led")))
+        (comp
+            (ref D45)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 41)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[44].led")))
+        (comp
+            (ref D46)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 42)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[45].led")))
+        (comp
+            (ref D47)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 43)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[46].led")))
+        (comp
+            (ref D48)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 44)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[47].led")))
+        (comp
+            (ref D49)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 45)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[48].led")))
+        (comp
+            (ref D5)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 46)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[11].led")))
+        (comp
+            (ref D50)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 47)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[49].led")))
+        (comp
+            (ref D51)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 48)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[50].led")))
+        (comp
+            (ref D52)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 49)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[51].led")))
+        (comp
+            (ref D53)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 50)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[52].led")))
+        (comp
+            (ref D54)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 51)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[53].led")))
+        (comp
+            (ref D55)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 52)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[54].led")))
+        (comp
+            (ref D56)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 53)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[55].led")))
+        (comp
+            (ref D57)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 54)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[56].led")))
+        (comp
+            (ref D58)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 55)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[57].led")))
+        (comp
+            (ref D59)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 56)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[58].led")))
+        (comp
+            (ref D6)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 57)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
                 (value "*.text.leds[12].led")))
+        (comp
+            (ref D60)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 58)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[59].led")))
+        (comp
+            (ref D61)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 59)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[60].led")))
+        (comp
+            (ref D62)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 60)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[61].led")))
+        (comp
+            (ref D63)
+            (value LED)
+            (footprint lcsc:LED0402-R-RD_RED)
+            (tstamp 61)
+            (property
+                (name LCSC)
+                (value C965790))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[62].led")))
         (comp
             (ref D7)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
-            (tstamp 16)
+            (tstamp 62)
             (property
                 (name LCSC)
                 (value C965790))
@@ -181,7 +687,7 @@
             (ref D8)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
-            (tstamp 17)
+            (tstamp 63)
             (property
                 (name LCSC)
                 (value C965790))
@@ -192,7 +698,7 @@
             (ref D9)
             (value LED)
             (footprint lcsc:LED0402-R-RD_RED)
-            (tstamp 18)
+            (tstamp 64)
             (property
                 (name LCSC)
                 (value C965790))
@@ -203,7 +709,7 @@
             (ref F1)
             (value Fuse)
             (footprint lcsc:F0402)
-            (tstamp 19)
+            (tstamp 65)
             (property
                 (name LCSC)
                 (value C914087))
@@ -214,12 +720,12 @@
             (ref LOGO1)
             (value Faebryk_Logo)
             (footprint logo:faebryk_logo)
-            (tstamp 20))
+            (tstamp 66))
         (comp
             (ref P1)
             (value USB_Type_C_Receptacle_16_pin)
             (footprint lcsc:USB-C-SMD_TYPE-C-6PIN-2MD-073)
-            (tstamp 21)
+            (tstamp 67)
             (property
                 (name LCSC)
                 (value C2765186))
@@ -230,7 +736,7 @@
             (ref R1)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 22)
+            (tstamp 68)
             (property
                 (name LCSC)
                 (value C25076))
@@ -241,7 +747,7 @@
             (ref R10)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 23)
+            (tstamp 69)
             (property
                 (name LCSC)
                 (value C25076))
@@ -252,7 +758,7 @@
             (ref R11)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 24)
+            (tstamp 70)
             (property
                 (name LCSC)
                 (value C25076))
@@ -263,7 +769,7 @@
             (ref R12)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 25)
+            (tstamp 71)
             (property
                 (name LCSC)
                 (value C25076))
@@ -274,7 +780,7 @@
             (ref R13)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 26)
+            (tstamp 72)
             (property
                 (name LCSC)
                 (value C25076))
@@ -285,7 +791,7 @@
             (ref R14)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 27)
+            (tstamp 73)
             (property
                 (name LCSC)
                 (value C25076))
@@ -296,7 +802,7 @@
             (ref R15)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 28)
+            (tstamp 74)
             (property
                 (name LCSC)
                 (value C25076))
@@ -307,7 +813,7 @@
             (ref R16)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 29)
+            (tstamp 75)
             (property
                 (name LCSC)
                 (value C25076))
@@ -318,7 +824,7 @@
             (ref R17)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 30)
+            (tstamp 76)
             (property
                 (name LCSC)
                 (value C25076))
@@ -326,10 +832,32 @@
                 (name faebryk_name)
                 (value "*.text.leds[7].current_limiting_resistor")))
         (comp
+            (ref R18)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 77)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[17].current_limiting_resistor")))
+        (comp
+            (ref R19)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 78)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[18].current_limiting_resistor")))
+        (comp
             (ref R2)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 31)
+            (tstamp 79)
             (property
                 (name LCSC)
                 (value C25076))
@@ -340,7 +868,7 @@
             (ref R20)
             (value 5.1kΩ)
             (footprint lcsc:R0402)
-            (tstamp 32)
+            (tstamp 80)
             (property
                 (name LCSC)
                 (value C25905))
@@ -351,7 +879,7 @@
             (ref R21)
             (value 5.1kΩ)
             (footprint lcsc:R0402)
-            (tstamp 33)
+            (tstamp 81)
             (property
                 (name LCSC)
                 (value C25905))
@@ -359,10 +887,98 @@
                 (name faebryk_name)
                 (value "*.usb_psu.configuration_resistors[1]")))
         (comp
+            (ref R22)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 82)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[19].current_limiting_resistor")))
+        (comp
+            (ref R23)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 83)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[20].current_limiting_resistor")))
+        (comp
+            (ref R24)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 84)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[21].current_limiting_resistor")))
+        (comp
+            (ref R25)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 85)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[22].current_limiting_resistor")))
+        (comp
+            (ref R26)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 86)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[23].current_limiting_resistor")))
+        (comp
+            (ref R27)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 87)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[24].current_limiting_resistor")))
+        (comp
+            (ref R28)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 88)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[25].current_limiting_resistor")))
+        (comp
+            (ref R29)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 89)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[26].current_limiting_resistor")))
+        (comp
             (ref R3)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 34)
+            (tstamp 90)
             (property
                 (name LCSC)
                 (value C25076))
@@ -370,10 +986,120 @@
                 (name faebryk_name)
                 (value "*.text.leds[9].current_limiting_resistor")))
         (comp
+            (ref R30)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 91)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[27].current_limiting_resistor")))
+        (comp
+            (ref R31)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 92)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[28].current_limiting_resistor")))
+        (comp
+            (ref R32)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 93)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[29].current_limiting_resistor")))
+        (comp
+            (ref R33)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 94)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[30].current_limiting_resistor")))
+        (comp
+            (ref R34)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 95)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[31].current_limiting_resistor")))
+        (comp
+            (ref R35)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 96)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[32].current_limiting_resistor")))
+        (comp
+            (ref R36)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 97)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[33].current_limiting_resistor")))
+        (comp
+            (ref R37)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 98)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[34].current_limiting_resistor")))
+        (comp
+            (ref R38)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 99)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[35].current_limiting_resistor")))
+        (comp
+            (ref R39)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 100)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[36].current_limiting_resistor")))
+        (comp
             (ref R4)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 35)
+            (tstamp 101)
             (property
                 (name LCSC)
                 (value C25076))
@@ -381,10 +1107,120 @@
                 (name faebryk_name)
                 (value "*.text.leds[8].current_limiting_resistor")))
         (comp
+            (ref R40)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 102)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[37].current_limiting_resistor")))
+        (comp
+            (ref R41)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 103)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[38].current_limiting_resistor")))
+        (comp
+            (ref R42)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 104)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[39].current_limiting_resistor")))
+        (comp
+            (ref R43)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 105)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[40].current_limiting_resistor")))
+        (comp
+            (ref R44)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 106)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[41].current_limiting_resistor")))
+        (comp
+            (ref R45)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 107)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[42].current_limiting_resistor")))
+        (comp
+            (ref R46)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 108)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[43].current_limiting_resistor")))
+        (comp
+            (ref R47)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 109)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[44].current_limiting_resistor")))
+        (comp
+            (ref R48)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 110)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[45].current_limiting_resistor")))
+        (comp
+            (ref R49)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 111)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[46].current_limiting_resistor")))
+        (comp
             (ref R5)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 36)
+            (tstamp 112)
             (property
                 (name LCSC)
                 (value C25076))
@@ -392,10 +1228,120 @@
                 (name faebryk_name)
                 (value "*.text.leds[11].current_limiting_resistor")))
         (comp
+            (ref R50)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 113)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[47].current_limiting_resistor")))
+        (comp
+            (ref R51)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 114)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[48].current_limiting_resistor")))
+        (comp
+            (ref R52)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 115)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[49].current_limiting_resistor")))
+        (comp
+            (ref R53)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 116)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[50].current_limiting_resistor")))
+        (comp
+            (ref R54)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 117)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[51].current_limiting_resistor")))
+        (comp
+            (ref R55)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 118)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[52].current_limiting_resistor")))
+        (comp
+            (ref R56)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 119)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[53].current_limiting_resistor")))
+        (comp
+            (ref R57)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 120)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[54].current_limiting_resistor")))
+        (comp
+            (ref R58)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 121)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[55].current_limiting_resistor")))
+        (comp
+            (ref R59)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 122)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[56].current_limiting_resistor")))
+        (comp
             (ref R6)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 37)
+            (tstamp 123)
             (property
                 (name LCSC)
                 (value C25076))
@@ -403,10 +1349,76 @@
                 (name faebryk_name)
                 (value "*.text.leds[12].current_limiting_resistor")))
         (comp
+            (ref R60)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 124)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[57].current_limiting_resistor")))
+        (comp
+            (ref R61)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 125)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[58].current_limiting_resistor")))
+        (comp
+            (ref R62)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 126)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[59].current_limiting_resistor")))
+        (comp
+            (ref R63)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 127)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[60].current_limiting_resistor")))
+        (comp
+            (ref R64)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 128)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[61].current_limiting_resistor")))
+        (comp
+            (ref R65)
+            (value 100Ω)
+            (footprint lcsc:R0402)
+            (tstamp 129)
+            (property
+                (name LCSC)
+                (value C25076))
+            (property
+                (name faebryk_name)
+                (value "*.text.leds[62].current_limiting_resistor")))
+        (comp
             (ref R7)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 38)
+            (tstamp 130)
             (property
                 (name LCSC)
                 (value C25076))
@@ -417,7 +1429,7 @@
             (ref R8)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 39)
+            (tstamp 131)
             (property
                 (name LCSC)
                 (value C25076))
@@ -428,7 +1440,7 @@
             (ref R9)
             (value 100Ω)
             (footprint lcsc:R0402)
-            (tstamp 40)
+            (tstamp 132)
             (property
                 (name LCSC)
                 (value C25076))
@@ -573,6 +1585,36 @@
                 (pin 2)))
         (net
             (code 19)
+            (name D18-1-R18-1)
+            (node
+                (ref D18)
+                (pin 1))
+            (node
+                (ref R18)
+                (pin 1)))
+        (net
+            (code 20)
+            (name D18-2)
+            (node
+                (ref D18)
+                (pin 2)))
+        (net
+            (code 21)
+            (name D19-1-R19-1)
+            (node
+                (ref D19)
+                (pin 1))
+            (node
+                (ref R19)
+                (pin 1)))
+        (net
+            (code 22)
+            (name D19-2)
+            (node
+                (ref D19)
+                (pin 2)))
+        (net
+            (code 23)
             (name D2-1-R2-1)
             (node
                 (ref D2)
@@ -581,13 +1623,163 @@
                 (ref R2)
                 (pin 1)))
         (net
-            (code 20)
+            (code 24)
             (name D2-2)
             (node
                 (ref D2)
                 (pin 2)))
         (net
-            (code 21)
+            (code 25)
+            (name D20-1-R22-1)
+            (node
+                (ref D20)
+                (pin 1))
+            (node
+                (ref R22)
+                (pin 1)))
+        (net
+            (code 26)
+            (name D20-2)
+            (node
+                (ref D20)
+                (pin 2)))
+        (net
+            (code 27)
+            (name D21-1-R23-1)
+            (node
+                (ref D21)
+                (pin 1))
+            (node
+                (ref R23)
+                (pin 1)))
+        (net
+            (code 28)
+            (name D21-2)
+            (node
+                (ref D21)
+                (pin 2)))
+        (net
+            (code 29)
+            (name D22-1-R24-1)
+            (node
+                (ref D22)
+                (pin 1))
+            (node
+                (ref R24)
+                (pin 1)))
+        (net
+            (code 30)
+            (name D22-2)
+            (node
+                (ref D22)
+                (pin 2)))
+        (net
+            (code 31)
+            (name D23-1-R25-1)
+            (node
+                (ref D23)
+                (pin 1))
+            (node
+                (ref R25)
+                (pin 1)))
+        (net
+            (code 32)
+            (name D23-2)
+            (node
+                (ref D23)
+                (pin 2)))
+        (net
+            (code 33)
+            (name D24-1-R26-1)
+            (node
+                (ref D24)
+                (pin 1))
+            (node
+                (ref R26)
+                (pin 1)))
+        (net
+            (code 34)
+            (name D24-2)
+            (node
+                (ref D24)
+                (pin 2)))
+        (net
+            (code 35)
+            (name D25-1-R27-1)
+            (node
+                (ref D25)
+                (pin 1))
+            (node
+                (ref R27)
+                (pin 1)))
+        (net
+            (code 36)
+            (name D25-2)
+            (node
+                (ref D25)
+                (pin 2)))
+        (net
+            (code 37)
+            (name D26-1-R28-1)
+            (node
+                (ref D26)
+                (pin 1))
+            (node
+                (ref R28)
+                (pin 1)))
+        (net
+            (code 38)
+            (name D26-2)
+            (node
+                (ref D26)
+                (pin 2)))
+        (net
+            (code 39)
+            (name D27-1-R29-1)
+            (node
+                (ref D27)
+                (pin 1))
+            (node
+                (ref R29)
+                (pin 1)))
+        (net
+            (code 40)
+            (name D27-2)
+            (node
+                (ref D27)
+                (pin 2)))
+        (net
+            (code 41)
+            (name D28-1-R30-1)
+            (node
+                (ref D28)
+                (pin 1))
+            (node
+                (ref R30)
+                (pin 1)))
+        (net
+            (code 42)
+            (name D28-2)
+            (node
+                (ref D28)
+                (pin 2)))
+        (net
+            (code 43)
+            (name D29-1-R31-1)
+            (node
+                (ref D29)
+                (pin 1))
+            (node
+                (ref R31)
+                (pin 1)))
+        (net
+            (code 44)
+            (name D29-2)
+            (node
+                (ref D29)
+                (pin 2)))
+        (net
+            (code 45)
             (name D3-1-R3-1)
             (node
                 (ref D3)
@@ -596,13 +1788,163 @@
                 (ref R3)
                 (pin 1)))
         (net
-            (code 22)
+            (code 46)
             (name D3-2)
             (node
                 (ref D3)
                 (pin 2)))
         (net
-            (code 23)
+            (code 47)
+            (name D30-1-R32-1)
+            (node
+                (ref D30)
+                (pin 1))
+            (node
+                (ref R32)
+                (pin 1)))
+        (net
+            (code 48)
+            (name D30-2)
+            (node
+                (ref D30)
+                (pin 2)))
+        (net
+            (code 49)
+            (name D31-1-R33-1)
+            (node
+                (ref D31)
+                (pin 1))
+            (node
+                (ref R33)
+                (pin 1)))
+        (net
+            (code 50)
+            (name D31-2)
+            (node
+                (ref D31)
+                (pin 2)))
+        (net
+            (code 51)
+            (name D32-1-R34-1)
+            (node
+                (ref D32)
+                (pin 1))
+            (node
+                (ref R34)
+                (pin 1)))
+        (net
+            (code 52)
+            (name D32-2)
+            (node
+                (ref D32)
+                (pin 2)))
+        (net
+            (code 53)
+            (name D33-1-R35-1)
+            (node
+                (ref D33)
+                (pin 1))
+            (node
+                (ref R35)
+                (pin 1)))
+        (net
+            (code 54)
+            (name D33-2)
+            (node
+                (ref D33)
+                (pin 2)))
+        (net
+            (code 55)
+            (name D34-1-R36-1)
+            (node
+                (ref D34)
+                (pin 1))
+            (node
+                (ref R36)
+                (pin 1)))
+        (net
+            (code 56)
+            (name D34-2)
+            (node
+                (ref D34)
+                (pin 2)))
+        (net
+            (code 57)
+            (name D35-1-R37-1)
+            (node
+                (ref D35)
+                (pin 1))
+            (node
+                (ref R37)
+                (pin 1)))
+        (net
+            (code 58)
+            (name D35-2)
+            (node
+                (ref D35)
+                (pin 2)))
+        (net
+            (code 59)
+            (name D36-1-R38-1)
+            (node
+                (ref D36)
+                (pin 1))
+            (node
+                (ref R38)
+                (pin 1)))
+        (net
+            (code 60)
+            (name D36-2)
+            (node
+                (ref D36)
+                (pin 2)))
+        (net
+            (code 61)
+            (name D37-1-R39-1)
+            (node
+                (ref D37)
+                (pin 1))
+            (node
+                (ref R39)
+                (pin 1)))
+        (net
+            (code 62)
+            (name D37-2)
+            (node
+                (ref D37)
+                (pin 2)))
+        (net
+            (code 63)
+            (name D38-1-R40-1)
+            (node
+                (ref D38)
+                (pin 1))
+            (node
+                (ref R40)
+                (pin 1)))
+        (net
+            (code 64)
+            (name D38-2)
+            (node
+                (ref D38)
+                (pin 2)))
+        (net
+            (code 65)
+            (name D39-1-R41-1)
+            (node
+                (ref D39)
+                (pin 1))
+            (node
+                (ref R41)
+                (pin 1)))
+        (net
+            (code 66)
+            (name D39-2)
+            (node
+                (ref D39)
+                (pin 2)))
+        (net
+            (code 67)
             (name D4-1-R4-1)
             (node
                 (ref D4)
@@ -611,13 +1953,163 @@
                 (ref R4)
                 (pin 1)))
         (net
-            (code 24)
+            (code 68)
             (name D4-2)
             (node
                 (ref D4)
                 (pin 2)))
         (net
-            (code 25)
+            (code 69)
+            (name D40-1-R42-1)
+            (node
+                (ref D40)
+                (pin 1))
+            (node
+                (ref R42)
+                (pin 1)))
+        (net
+            (code 70)
+            (name D40-2)
+            (node
+                (ref D40)
+                (pin 2)))
+        (net
+            (code 71)
+            (name D41-1-R43-1)
+            (node
+                (ref D41)
+                (pin 1))
+            (node
+                (ref R43)
+                (pin 1)))
+        (net
+            (code 72)
+            (name D41-2)
+            (node
+                (ref D41)
+                (pin 2)))
+        (net
+            (code 73)
+            (name D42-1-R44-1)
+            (node
+                (ref D42)
+                (pin 1))
+            (node
+                (ref R44)
+                (pin 1)))
+        (net
+            (code 74)
+            (name D42-2)
+            (node
+                (ref D42)
+                (pin 2)))
+        (net
+            (code 75)
+            (name D43-1-R45-1)
+            (node
+                (ref D43)
+                (pin 1))
+            (node
+                (ref R45)
+                (pin 1)))
+        (net
+            (code 76)
+            (name D43-2)
+            (node
+                (ref D43)
+                (pin 2)))
+        (net
+            (code 77)
+            (name D44-1-R46-1)
+            (node
+                (ref D44)
+                (pin 1))
+            (node
+                (ref R46)
+                (pin 1)))
+        (net
+            (code 78)
+            (name D44-2)
+            (node
+                (ref D44)
+                (pin 2)))
+        (net
+            (code 79)
+            (name D45-1-R47-1)
+            (node
+                (ref D45)
+                (pin 1))
+            (node
+                (ref R47)
+                (pin 1)))
+        (net
+            (code 80)
+            (name D45-2)
+            (node
+                (ref D45)
+                (pin 2)))
+        (net
+            (code 81)
+            (name D46-1-R48-1)
+            (node
+                (ref D46)
+                (pin 1))
+            (node
+                (ref R48)
+                (pin 1)))
+        (net
+            (code 82)
+            (name D46-2)
+            (node
+                (ref D46)
+                (pin 2)))
+        (net
+            (code 83)
+            (name D47-1-R49-1)
+            (node
+                (ref D47)
+                (pin 1))
+            (node
+                (ref R49)
+                (pin 1)))
+        (net
+            (code 84)
+            (name D47-2)
+            (node
+                (ref D47)
+                (pin 2)))
+        (net
+            (code 85)
+            (name D48-1-R50-1)
+            (node
+                (ref D48)
+                (pin 1))
+            (node
+                (ref R50)
+                (pin 1)))
+        (net
+            (code 86)
+            (name D48-2)
+            (node
+                (ref D48)
+                (pin 2)))
+        (net
+            (code 87)
+            (name D49-1-R51-1)
+            (node
+                (ref D49)
+                (pin 1))
+            (node
+                (ref R51)
+                (pin 1)))
+        (net
+            (code 88)
+            (name D49-2)
+            (node
+                (ref D49)
+                (pin 2)))
+        (net
+            (code 89)
             (name D5-1-R5-1)
             (node
                 (ref D5)
@@ -626,13 +2118,163 @@
                 (ref R5)
                 (pin 1)))
         (net
-            (code 26)
+            (code 90)
             (name D5-2)
             (node
                 (ref D5)
                 (pin 2)))
         (net
-            (code 27)
+            (code 91)
+            (name D50-1-R52-1)
+            (node
+                (ref D50)
+                (pin 1))
+            (node
+                (ref R52)
+                (pin 1)))
+        (net
+            (code 92)
+            (name D50-2)
+            (node
+                (ref D50)
+                (pin 2)))
+        (net
+            (code 93)
+            (name D51-1-R53-1)
+            (node
+                (ref D51)
+                (pin 1))
+            (node
+                (ref R53)
+                (pin 1)))
+        (net
+            (code 94)
+            (name D51-2)
+            (node
+                (ref D51)
+                (pin 2)))
+        (net
+            (code 95)
+            (name D52-1-R54-1)
+            (node
+                (ref D52)
+                (pin 1))
+            (node
+                (ref R54)
+                (pin 1)))
+        (net
+            (code 96)
+            (name D52-2)
+            (node
+                (ref D52)
+                (pin 2)))
+        (net
+            (code 97)
+            (name D53-1-R55-1)
+            (node
+                (ref D53)
+                (pin 1))
+            (node
+                (ref R55)
+                (pin 1)))
+        (net
+            (code 98)
+            (name D53-2)
+            (node
+                (ref D53)
+                (pin 2)))
+        (net
+            (code 99)
+            (name D54-1-R56-1)
+            (node
+                (ref D54)
+                (pin 1))
+            (node
+                (ref R56)
+                (pin 1)))
+        (net
+            (code 100)
+            (name D54-2)
+            (node
+                (ref D54)
+                (pin 2)))
+        (net
+            (code 101)
+            (name D55-1-R57-1)
+            (node
+                (ref D55)
+                (pin 1))
+            (node
+                (ref R57)
+                (pin 1)))
+        (net
+            (code 102)
+            (name D55-2)
+            (node
+                (ref D55)
+                (pin 2)))
+        (net
+            (code 103)
+            (name D56-1-R58-1)
+            (node
+                (ref D56)
+                (pin 1))
+            (node
+                (ref R58)
+                (pin 1)))
+        (net
+            (code 104)
+            (name D56-2)
+            (node
+                (ref D56)
+                (pin 2)))
+        (net
+            (code 105)
+            (name D57-1-R59-1)
+            (node
+                (ref D57)
+                (pin 1))
+            (node
+                (ref R59)
+                (pin 1)))
+        (net
+            (code 106)
+            (name D57-2)
+            (node
+                (ref D57)
+                (pin 2)))
+        (net
+            (code 107)
+            (name D58-1-R60-1)
+            (node
+                (ref D58)
+                (pin 1))
+            (node
+                (ref R60)
+                (pin 1)))
+        (net
+            (code 108)
+            (name D58-2)
+            (node
+                (ref D58)
+                (pin 2)))
+        (net
+            (code 109)
+            (name D59-1-R61-1)
+            (node
+                (ref D59)
+                (pin 1))
+            (node
+                (ref R61)
+                (pin 1)))
+        (net
+            (code 110)
+            (name D59-2)
+            (node
+                (ref D59)
+                (pin 2)))
+        (net
+            (code 111)
             (name D6-1-R6-1)
             (node
                 (ref D6)
@@ -641,13 +2283,73 @@
                 (ref R6)
                 (pin 1)))
         (net
-            (code 28)
+            (code 112)
             (name D6-2)
             (node
                 (ref D6)
                 (pin 2)))
         (net
-            (code 29)
+            (code 113)
+            (name D60-1-R62-1)
+            (node
+                (ref D60)
+                (pin 1))
+            (node
+                (ref R62)
+                (pin 1)))
+        (net
+            (code 114)
+            (name D60-2)
+            (node
+                (ref D60)
+                (pin 2)))
+        (net
+            (code 115)
+            (name D61-1-R63-1)
+            (node
+                (ref D61)
+                (pin 1))
+            (node
+                (ref R63)
+                (pin 1)))
+        (net
+            (code 116)
+            (name D61-2)
+            (node
+                (ref D61)
+                (pin 2)))
+        (net
+            (code 117)
+            (name D62-1-R64-1)
+            (node
+                (ref D62)
+                (pin 1))
+            (node
+                (ref R64)
+                (pin 1)))
+        (net
+            (code 118)
+            (name D62-2)
+            (node
+                (ref D62)
+                (pin 2)))
+        (net
+            (code 119)
+            (name D63-1-R65-1)
+            (node
+                (ref D63)
+                (pin 1))
+            (node
+                (ref R65)
+                (pin 1)))
+        (net
+            (code 120)
+            (name D63-2)
+            (node
+                (ref D63)
+                (pin 2)))
+        (net
+            (code 121)
             (name D7-1-R7-1)
             (node
                 (ref D7)
@@ -656,13 +2358,13 @@
                 (ref R7)
                 (pin 1)))
         (net
-            (code 30)
+            (code 122)
             (name D7-2)
             (node
                 (ref D7)
                 (pin 2)))
         (net
-            (code 31)
+            (code 123)
             (name D8-1-R8-1)
             (node
                 (ref D8)
@@ -671,13 +2373,13 @@
                 (ref R8)
                 (pin 1)))
         (net
-            (code 32)
+            (code 124)
             (name D8-2)
             (node
                 (ref D8)
                 (pin 2)))
         (net
-            (code 33)
+            (code 125)
             (name D9-1-R9-1)
             (node
                 (ref D9)
@@ -686,13 +2388,13 @@
                 (ref R9)
                 (pin 1)))
         (net
-            (code 34)
+            (code 126)
             (name D9-2)
             (node
                 (ref D9)
                 (pin 2)))
         (net
-            (code 35)
+            (code 127)
             (name F1-1-P1-11-P1-2)
             (node
                 (ref F1)
@@ -704,13 +2406,13 @@
                 (ref P1)
                 (pin 2)))
         (net
-            (code 36)
+            (code 128)
             (name P1-10)
             (node
                 (ref P1)
                 (pin 10)))
         (net
-            (code 37)
+            (code 129)
             (name P1-13-P1-14)
             (node
                 (ref P1)
@@ -719,13 +2421,13 @@
                 (ref P1)
                 (pin 14)))
         (net
-            (code 38)
+            (code 130)
             (name P1-3)
             (node
                 (ref P1)
                 (pin 3)))
         (net
-            (code 39)
+            (code 131)
             (name P1-4-R20-1)
             (node
                 (ref P1)
@@ -734,31 +2436,31 @@
                 (ref R20)
                 (pin 1)))
         (net
-            (code 40)
+            (code 132)
             (name P1-5)
             (node
                 (ref P1)
                 (pin 5)))
         (net
-            (code 41)
+            (code 133)
             (name P1-6)
             (node
                 (ref P1)
                 (pin 6)))
         (net
-            (code 42)
+            (code 134)
             (name P1-7)
             (node
                 (ref P1)
                 (pin 7)))
         (net
-            (code 43)
+            (code 135)
             (name P1-8)
             (node
                 (ref P1)
                 (pin 8)))
         (net
-            (code 44)
+            (code 136)
             (name P1-9-R21-1)
             (node
                 (ref P1)
@@ -767,109 +2469,385 @@
                 (ref R21)
                 (pin 1)))
         (net
-            (code 45)
+            (code 137)
             (name R1-2)
             (node
                 (ref R1)
                 (pin 2)))
         (net
-            (code 46)
+            (code 138)
             (name R10-2)
             (node
                 (ref R10)
                 (pin 2)))
         (net
-            (code 47)
+            (code 139)
             (name R11-2)
             (node
                 (ref R11)
                 (pin 2)))
         (net
-            (code 48)
+            (code 140)
             (name R12-2)
             (node
                 (ref R12)
                 (pin 2)))
         (net
-            (code 49)
+            (code 141)
             (name R13-2)
             (node
                 (ref R13)
                 (pin 2)))
         (net
-            (code 50)
+            (code 142)
             (name R14-2)
             (node
                 (ref R14)
                 (pin 2)))
         (net
-            (code 51)
+            (code 143)
             (name R15-2)
             (node
                 (ref R15)
                 (pin 2)))
         (net
-            (code 52)
+            (code 144)
             (name R16-2)
             (node
                 (ref R16)
                 (pin 2)))
         (net
-            (code 53)
+            (code 145)
             (name R17-2)
             (node
                 (ref R17)
                 (pin 2)))
         (net
-            (code 54)
+            (code 146)
+            (name R18-2)
+            (node
+                (ref R18)
+                (pin 2)))
+        (net
+            (code 147)
+            (name R19-2)
+            (node
+                (ref R19)
+                (pin 2)))
+        (net
+            (code 148)
             (name R2-2)
             (node
                 (ref R2)
                 (pin 2)))
         (net
-            (code 55)
+            (code 149)
+            (name R22-2)
+            (node
+                (ref R22)
+                (pin 2)))
+        (net
+            (code 150)
+            (name R23-2)
+            (node
+                (ref R23)
+                (pin 2)))
+        (net
+            (code 151)
+            (name R24-2)
+            (node
+                (ref R24)
+                (pin 2)))
+        (net
+            (code 152)
+            (name R25-2)
+            (node
+                (ref R25)
+                (pin 2)))
+        (net
+            (code 153)
+            (name R26-2)
+            (node
+                (ref R26)
+                (pin 2)))
+        (net
+            (code 154)
+            (name R27-2)
+            (node
+                (ref R27)
+                (pin 2)))
+        (net
+            (code 155)
+            (name R28-2)
+            (node
+                (ref R28)
+                (pin 2)))
+        (net
+            (code 156)
+            (name R29-2)
+            (node
+                (ref R29)
+                (pin 2)))
+        (net
+            (code 157)
             (name R3-2)
             (node
                 (ref R3)
                 (pin 2)))
         (net
-            (code 56)
+            (code 158)
+            (name R30-2)
+            (node
+                (ref R30)
+                (pin 2)))
+        (net
+            (code 159)
+            (name R31-2)
+            (node
+                (ref R31)
+                (pin 2)))
+        (net
+            (code 160)
+            (name R32-2)
+            (node
+                (ref R32)
+                (pin 2)))
+        (net
+            (code 161)
+            (name R33-2)
+            (node
+                (ref R33)
+                (pin 2)))
+        (net
+            (code 162)
+            (name R34-2)
+            (node
+                (ref R34)
+                (pin 2)))
+        (net
+            (code 163)
+            (name R35-2)
+            (node
+                (ref R35)
+                (pin 2)))
+        (net
+            (code 164)
+            (name R36-2)
+            (node
+                (ref R36)
+                (pin 2)))
+        (net
+            (code 165)
+            (name R37-2)
+            (node
+                (ref R37)
+                (pin 2)))
+        (net
+            (code 166)
+            (name R38-2)
+            (node
+                (ref R38)
+                (pin 2)))
+        (net
+            (code 167)
+            (name R39-2)
+            (node
+                (ref R39)
+                (pin 2)))
+        (net
+            (code 168)
             (name R4-2)
             (node
                 (ref R4)
                 (pin 2)))
         (net
-            (code 57)
+            (code 169)
+            (name R40-2)
+            (node
+                (ref R40)
+                (pin 2)))
+        (net
+            (code 170)
+            (name R41-2)
+            (node
+                (ref R41)
+                (pin 2)))
+        (net
+            (code 171)
+            (name R42-2)
+            (node
+                (ref R42)
+                (pin 2)))
+        (net
+            (code 172)
+            (name R43-2)
+            (node
+                (ref R43)
+                (pin 2)))
+        (net
+            (code 173)
+            (name R44-2)
+            (node
+                (ref R44)
+                (pin 2)))
+        (net
+            (code 174)
+            (name R45-2)
+            (node
+                (ref R45)
+                (pin 2)))
+        (net
+            (code 175)
+            (name R46-2)
+            (node
+                (ref R46)
+                (pin 2)))
+        (net
+            (code 176)
+            (name R47-2)
+            (node
+                (ref R47)
+                (pin 2)))
+        (net
+            (code 177)
+            (name R48-2)
+            (node
+                (ref R48)
+                (pin 2)))
+        (net
+            (code 178)
+            (name R49-2)
+            (node
+                (ref R49)
+                (pin 2)))
+        (net
+            (code 179)
             (name R5-2)
             (node
                 (ref R5)
                 (pin 2)))
         (net
-            (code 58)
+            (code 180)
+            (name R50-2)
+            (node
+                (ref R50)
+                (pin 2)))
+        (net
+            (code 181)
+            (name R51-2)
+            (node
+                (ref R51)
+                (pin 2)))
+        (net
+            (code 182)
+            (name R52-2)
+            (node
+                (ref R52)
+                (pin 2)))
+        (net
+            (code 183)
+            (name R53-2)
+            (node
+                (ref R53)
+                (pin 2)))
+        (net
+            (code 184)
+            (name R54-2)
+            (node
+                (ref R54)
+                (pin 2)))
+        (net
+            (code 185)
+            (name R55-2)
+            (node
+                (ref R55)
+                (pin 2)))
+        (net
+            (code 186)
+            (name R56-2)
+            (node
+                (ref R56)
+                (pin 2)))
+        (net
+            (code 187)
+            (name R57-2)
+            (node
+                (ref R57)
+                (pin 2)))
+        (net
+            (code 188)
+            (name R58-2)
+            (node
+                (ref R58)
+                (pin 2)))
+        (net
+            (code 189)
+            (name R59-2)
+            (node
+                (ref R59)
+                (pin 2)))
+        (net
+            (code 190)
             (name R6-2)
             (node
                 (ref R6)
                 (pin 2)))
         (net
-            (code 59)
+            (code 191)
+            (name R60-2)
+            (node
+                (ref R60)
+                (pin 2)))
+        (net
+            (code 192)
+            (name R61-2)
+            (node
+                (ref R61)
+                (pin 2)))
+        (net
+            (code 193)
+            (name R62-2)
+            (node
+                (ref R62)
+                (pin 2)))
+        (net
+            (code 194)
+            (name R63-2)
+            (node
+                (ref R63)
+                (pin 2)))
+        (net
+            (code 195)
+            (name R64-2)
+            (node
+                (ref R64)
+                (pin 2)))
+        (net
+            (code 196)
+            (name R65-2)
+            (node
+                (ref R65)
+                (pin 2)))
+        (net
+            (code 197)
             (name R7-2)
             (node
                 (ref R7)
                 (pin 2)))
         (net
-            (code 60)
+            (code 198)
             (name R8-2)
             (node
                 (ref R8)
                 (pin 2)))
         (net
-            (code 61)
+            (code 199)
             (name R9-2)
             (node
                 (ref R9)
                 (pin 2)))
         (net
-            (code 62)
+            (code 200)
             (name gnd)
             (node
                 (ref C1)
@@ -887,7 +2865,7 @@
                 (ref R21)
                 (pin 2)))
         (net
-            (code 63)
+            (code 201)
             (name vbus)
             (node
                 (ref C1)
