@@ -91,7 +91,7 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
     for i, line in enumerate(app.contact_info.split("\\n")):
         transformer.insert_text(
             text=line,
-            at=At.factory((creditcard_width / 2, creditcard_height / 2 + i * 5)),
+            at=At.factory((creditcard_width / 3, creditcard_height / 3 + i * 5)),
             font=Font.factory(
                 size=(2, 2),
                 thickness=0.1,
