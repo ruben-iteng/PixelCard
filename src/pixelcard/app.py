@@ -52,8 +52,7 @@ class PixelCard(Module):
         # ----------------------------------------
         #              connections
         # ----------------------------------------
-        # TODO reenable
-        # self.NODEs.text.IFs.power.connect(vbus)
+        self.NODEs.text.IFs.power.connect(vbus)
 
         # ----------------------------------------
         #              parametrization
