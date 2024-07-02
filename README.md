@@ -2,7 +2,7 @@
 
 # PixelCard
 
-<img height=300 title="Render" src="./render.png"/>
+<img height=300 title="Render" src="./build/visuals/3d.png"/>
 <br/>
 
 Business card generator with lots of blinky lights - PixelCard
@@ -12,21 +12,22 @@ Business card generator with lots of blinky lights - PixelCard
 </div>
 
 ## About
+PixelCard is a business card generator with lots of blinky lights. It is a showcase for the versatility of faebryk, an open-source EDA (Electronic Design Automation) tool.
+With PixelCard, you can create custom business cards that feature text filled with LEDs!
+The project features:
+- Auto-routing of the PCB
+- Auto-placement of the components
+- Design 100% defined in python
+- Custom font support
+- USB-C PD for power (5V)
+- Over current protection
+- ISO/IEC_7810 ID-1 credit card form factor
 
-<div align="center">
-<img height=200 title="Overview" src="./overview.png"/>
-</div>
-
-Business card generator with lots of blinky lights
 This project is build with the open-source EDA [faebryk](https://github.com/faebryk/faebryk).
-
-## What can you do with this project?
-
-Business card generator that converts the text into LED text
 
 ## Working with the source files
 
-See [here](./docs/development.md) for the instructions on how to install and edit this project.
+See [here](https://hackaday.io/project/196784-pixelcard#menu-instructions) for the instructions on how to install and edit this project.
 
 ## Building
 
@@ -42,6 +43,7 @@ Community support is provided via Discord; see the Resources below for details.
 
 ### Resources
 
+- Hackaday.io: [Project Page](https://hackaday.io/project/196784-pixelcard)
 - Source Code: [Github](https://github.com/ruben-iteng/pixelcard)
 - Chat: Real-time chat happens in faebryk's Discord Server (chit-chat room for now). Use this Discord [Invite](https://discord.gg/95jYuPmnUW) to register
 - Issues: [Issues](https://github.com/ruben-iteng/pixelcard/issues)
