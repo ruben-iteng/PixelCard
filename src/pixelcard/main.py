@@ -39,10 +39,11 @@ logger = logging.getLogger(__name__)
 
 
 def main(
-    netlist_export: bool = True,
-    pcb_transform: bool = True,
-    visualize_graph: bool = False,
-    export_pcba_artifacts: bool = False,
+    netlist_export: bool = typer.Option(True, help="Export the netlist"),
+    pcb_transform: bool = typer.Option(True, help="Let faebryk transform the PCB"),
+    visualize_graph: bool = typer.Option(False, help="Visualize the faebryk graph"),
+    export_pcba_artifacts: bool = typer.Option(False, help="Export PCBA artifacts"),
+    led_text: str = typer.Argument("PixelCard", help="Text to convert into LEDText."),
 ):
     # paths --------------------------------------------------
     build_dir = Path("./build")
@@ -61,7 +62,7 @@ def main(
     # graph --------------------------------------------------
     try:
         sys.setrecursionlimit(50000)  # TODO needs optimization
-        app = PixelCard()
+        app = PixelCard(led_text)
     except RecursionError:
         logger.error("RECURSION ERROR ABORTING")
         return

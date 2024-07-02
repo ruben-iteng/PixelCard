@@ -14,14 +14,14 @@ logger = logging.getLogger(__name__)
 
 
 class PixelCard(Module):
-    def __init__(self) -> None:
+    def __init__(self, _text: str = "REPLACE") -> None:
         super().__init__()
 
         # ----------------------------------------
         #     modules, interfaces, parameters
         # ----------------------------------------
         class _NODEs(Module.NODES()):
-            text = LEDText(text="F", char_dimensions=(10, 14))
+            text = LEDText(text=_text, char_dimensions=(10, 14))
             usb_psu = USB_C_5V_PSU_16p_Receptical()
             faebryk_logo = Faebryk_Logo()
 
