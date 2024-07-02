@@ -32,7 +32,7 @@ class LEDText(Module):
             font=Font(Path("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")),
             text=text,
             char_dimensions=char_dimensions,
-            resolution=(0.4, 0.35),
+            resolution=(0.33, 0.35),
             # bbox=(10, 14),
             kerning=5,
         )
