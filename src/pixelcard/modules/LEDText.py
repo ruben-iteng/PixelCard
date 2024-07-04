@@ -61,7 +61,7 @@ class LEDText(Module):
 
         for led in self.NODEs.leds:
             # TODO reenable
-            # led.IFs.power.connect(self.IFs.power)
+            led.IFs.power.connect(self.IFs.power)
             # Parametrize
             led.NODEs.led.PARAMs.color.merge(LED.Color.RED)
             led.NODEs.led.PARAMs.brightness.merge(

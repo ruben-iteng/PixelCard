@@ -5,13 +5,22 @@ import logging
 from pathlib import Path
 
 from faebryk.core.graph import Graph
-from faebryk.core.util import get_all_nodes
+from faebryk.core.util import (
+    get_all_nodes,
+    get_first_child_of_type,
+)
 from faebryk.exporters.pcb.kicad.transformer import PCB_Transformer
 from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
+from faebryk.exporters.pcb.routing.util import Path as FPath
+from faebryk.library.Capacitor import Capacitor
 from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
 from faebryk.library.has_pcb_position_defined import has_pcb_position_defined
+from faebryk.library.has_pcb_routing_strategy import has_pcb_routing_strategy
+from faebryk.library.has_pcb_routing_strategy_manual import (
+    has_pcb_routing_strategy_manual,
+)
 from faebryk.library.has_pcb_routing_strategy_via_to_layer import (
     has_pcb_routing_strategy_via_to_layer,
 )
@@ -113,6 +122,41 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
             (0.5, 0.5),
         )
     )
+    app.NODEs.net_gnd.get_trait(has_pcb_routing_strategy).priority = 1.0
+
+    # vbus routing usb-c connector
+    usb_con = app.NODEs.usb_psu.NODEs.usb
+    usb_con.add_trait(
+        has_pcb_routing_strategy_manual(
+            [
+                (
+                    usb_con.IFs.vbus,
+                    FPath(
+                        [
+                            FPath.Track(
+                                0.1,
+                                "F.Cu",
+                                [
+                                    # vbus[0]
+                                    (-2.5, -2.5),
+                                    (-1.5, -1),
+                                    (0, -1),
+                                    (1.5, -1),
+                                    # vbus[1]
+                                    (2.5, -2.5),
+                                ],
+                            )
+                        ]
+                    ),
+                ),
+            ]
+        )
+    )
+
+    get_first_child_of_type(app.NODEs.usb_psu, Capacitor).IFs.unnamed[0].add_trait(
+        has_pcb_routing_strategy_via_to_layer("B.Cu", (0, -1))
+    )
+
     # ----------------------------------------
     #                   Layout
     # ----------------------------------------
