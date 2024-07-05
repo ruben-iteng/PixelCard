@@ -6,7 +6,7 @@ from pathlib import Path
 
 from faebryk.core.graph import Graph
 from faebryk.core.util import get_all_nodes
-from faebryk.exporters.pcb.kicad.transformer import PCB_Transformer
+from faebryk.exporters.pcb.kicad.transformer import PCB_Transformer, Zone
 from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
 from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
@@ -16,6 +16,7 @@ from faebryk.library.has_pcb_routing_strategy_via_to_layer import (
     has_pcb_routing_strategy_via_to_layer,
 )
 from faebryk.libs.app.pcb import apply_layouts, apply_routing
+from faebryk.libs.font import Font as Ffont
 from faebryk.libs.kicad.pcb import PCB, At, Font
 from pixelcard.app import PixelCard
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
@@ -49,6 +50,37 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
         remove_existing_outline=True,
     )
 
+    font = Ffont(app.font.path)
+
+    polygons = font.string_to_polygons(
+        app.font_settings["text"],
+        app.font_settings["font_size"],
+        bbox=app.font_settings["bbox"],
+        scale_to_fit=app.font_settings["scale_to_fit"],
+    )
+
+    for polygon in polygons:
+        transformer.insert(
+            Zone.factory(
+                net=0,
+                net_name="Text",
+                layer="F.SilkS",
+                uuid=transformer.gen_uuid(mark=True),
+                name="Text_polygon",
+                polygon=[
+                    (
+                        p[0] + app.font_settings["pcb_offset"][0],
+                        p[1] + app.font_settings["pcb_offset"][1],
+                    )
+                    for p in polygon.exterior.coords
+                ],
+            )
+        )
+
+    ledtext_height = (
+        max([p.bounds[3] for p in polygons]) + app.font_settings["pcb_offset"][1]
+    )
+
     # move all reference designators to the same position
     footprints = [
         cmp.get_trait(PCB_Transformer.has_linked_kicad_footprint).get_fp()
@@ -67,26 +99,6 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
     if "-Bold" in font_name:
         font_name, _ = font_name.split("-Bold")
         bold = True
-
-    TEXT_POS = (2, 2)
-
-    # TODO better trace actual font
-    # add text as silkscreen
-    # transformer.insert_text(
-    #    text=app.text,
-    #    at=At.factory(
-    #        (
-    #            -2.5 + TEXT_POS[0],
-    #            0.5 + TEXT_POS[1],
-    #        )
-    #    ),
-    #    font=Font.factory(
-    #        size=app.NODEs.text.char_dimension,
-    #        thickness=0.2,
-    #        bold=bold,
-    #        face=font_name,
-    #    ),
-    # )
 
     for i, line in enumerate(app.contact_info.split("\\n")):
         transformer.insert_text(
@@ -119,11 +131,6 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
     Point = has_pcb_position.Point
     L = has_pcb_position.layer_type
 
-    # TODO: ugly
-    for node in get_all_nodes(app):
-        if isinstance(node, LEDText):
-            # ledtext_width = node.PARAMs.width.value
-            ledtext_height = node.PARAMs.height.value
     app.add_trait(
         has_pcb_layout_defined(
             LayoutTypeHierarchy(
@@ -133,8 +140,8 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
                         layout=LayoutAbsolute(
                             Point(
                                 (
-                                    -7 + TEXT_POS[0],
-                                    1.5 + TEXT_POS[1],
+                                    0 + app.font_settings["pcb_offset"][0],
+                                    0 + app.font_settings["pcb_offset"][1],
                                     0,
                                     L.NONE,
                                 )
@@ -147,7 +154,8 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
                             Point(
                                 (
                                     creditcard_width - 4.5,
-                                    2 * ledtext_height + 2.5,
+                                    ledtext_height
+                                    + (creditcard_height - ledtext_height) / 2,
                                     90,
                                     L.NONE,
                                 )
@@ -160,7 +168,8 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
                             Point(
                                 (
                                     creditcard_width / 2,
-                                    creditcard_height / 2 + ledtext_height,
+                                    ledtext_height
+                                    + (creditcard_height - ledtext_height) / 2,
                                     0,
                                     L.NONE,
                                 )
