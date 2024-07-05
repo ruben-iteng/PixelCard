@@ -13,17 +13,18 @@ from pathlib import Path
 
 import faebryk.libs.picker.lcsc as lcsc
 import typer
-
-# from faebryk.exporters.pcb.kicad.artifacts import (
-#    export_dxf,
-#    export_gerber,
-#    export_glb,
-#    export_pick_and_place,
-#    export_step,
-# )
-# from faebryk.exporters.pcb.pick_and_place.jlcpcb import (
-#    convert_kicad_pick_and_place_to_jlcpcb,
-# )
+from faebryk.core.util import get_all_modules
+from faebryk.exporters.bom.jlcpcb import write_bom_jlcpcb
+from faebryk.exporters.pcb.kicad.artifacts import (
+    export_dxf,
+    export_gerber,
+    export_glb,
+    export_pick_and_place,
+    export_step,
+)
+from faebryk.exporters.pcb.pick_and_place.jlcpcb import (
+    convert_kicad_pick_and_place_to_jlcpcb,
+)
 from faebryk.exporters.visualize.graph import render_matrix
 from faebryk.libs.app.erc import simple_erc
 from faebryk.libs.app.kicad_netlist import write_netlist
@@ -73,8 +74,8 @@ def main(
     netlist_path = faebryk_build_dir.joinpath("faebryk.net")
     kicad_prj_path = root.joinpath("source")
     pcbfile = kicad_prj_path.joinpath("main.kicad_pcb")
-    # manufacturing_artifacts = build_dir.joinpath("manufacturing_artifacts")
-    # cad_path = manufacturing_artifacts.joinpath("cad")
+    manufacturing_artifacts = build_dir.joinpath("manufacturing_artifacts")
+    cad_path = manufacturing_artifacts.joinpath("cad")
 
     lcsc.BUILD_FOLDER = build_dir
     lcsc.LIB_FOLDER = root.joinpath("libs")
@@ -145,23 +146,25 @@ def main(
     # ---------------------------------------------------------
 
     # generate pcba manufacturing and other artifacts ---------
-    # if export_pcba_artifacts:
-    #    logger.info("Exporting PCBA artifacts")
-    #    write_bom_jlcpcb(
-    #        get_all_modules(app), manufacturing_artifacts.joinpath("jlcpcb_bom.csv")
-    #    )
-    #    export_step(pcbfile, step_file=cad_path.joinpath("pcba.step"))
-    #    export_glb(pcbfile, glb_file=cad_path.joinpath("pcba.glb"))
-    #    export_dxf(pcbfile, dxf_file=cad_path.joinpath("pcba.dxf"))
-    #    export_gerber(
-    #        pcbfile, gerber_zip_file=manufacturing_artifacts.joinpath("gerber.zip")
-    #    )
-    #    pnp_file = manufacturing_artifacts.joinpath("pick_and_place.csv")
-    #    export_pick_and_place(pcbfile, pick_and_place_file=pnp_file)
-    #    convert_kicad_pick_and_place_to_jlcpcb(
-    #        pnp_file,
-    #        manufacturing_artifacts.joinpath("jlcpcb_pick_and_place.csv"),
-    #    )
+    if export_pcba_artifacts:
+        logger.info("Exporting PCBA artifacts")
+        cad_path.mkdir(parents=True, exist_ok=True)
+
+        write_bom_jlcpcb(
+            get_all_modules(app), manufacturing_artifacts.joinpath("jlcpcb_bom.csv")
+        )
+        export_step(pcbfile, step_file=cad_path.joinpath("pcba.step"))
+        export_glb(pcbfile, glb_file=cad_path.joinpath("pcba.glb"))
+        export_dxf(pcbfile, dxf_file=cad_path.joinpath("pcba.dxf"))
+        export_gerber(
+            pcbfile, gerber_zip_file=manufacturing_artifacts.joinpath("gerber.zip")
+        )
+        pnp_file = manufacturing_artifacts.joinpath("pick_and_place.csv")
+        export_pick_and_place(pcbfile, pick_and_place_file=pnp_file)
+        convert_kicad_pick_and_place_to_jlcpcb(
+            pnp_file,
+            manufacturing_artifacts.joinpath("jlcpcb_pick_and_place.csv"),
+        )
 
 
 if __name__ == "__main__":
