@@ -24,11 +24,27 @@ class PixelCard(Module):
         self.contact_info = contact_info
         self.font = font
 
+        text_margin = 4
+        self.font_settings = {
+            "text": _text,
+            "font": font,
+            "font_size": 20,
+            "bbox": (85.6 - text_margin * 2, 53.98 - text_margin * 2),
+            "scale_to_fit": True,
+            "pcb_offset": (text_margin, text_margin),
+        }
+
         # ----------------------------------------
         #     modules, interfaces, parameters
         # ----------------------------------------
         class _NODEs(Module.NODES()):
-            text = LEDText(text=_text, char_dimensions=(10 * 1.5, 14 * 1.5), font=font)
+            text = LEDText(
+                text=self.font_settings["text"],
+                font=self.font_settings["font"],
+                font_size=self.font_settings["font_size"],
+                bbox=self.font_settings["bbox"],
+                scale_to_fit=True,
+            )
             usb_psu = USB_C_5V_PSU_16p_Receptical()
             faebryk_logo = Faebryk_Logo()
 

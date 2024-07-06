@@ -1,10 +1,7 @@
-from typing import Tuple
-
 from faebryk.core.core import Module
 from faebryk.exporters.pcb.layout.absolute import LayoutAbsolute
 from faebryk.exporters.pcb.layout.font import FontLayout
 from faebryk.exporters.pcb.layout.typehierarchy import LayoutTypeHierarchy
-from faebryk.library.Constant import Constant
 from faebryk.library.ElectricPower import ElectricPower
 from faebryk.library.has_pcb_layout_defined import has_pcb_layout_defined
 from faebryk.library.has_pcb_position import has_pcb_position
@@ -23,22 +20,23 @@ class LEDText(Module):
     def __init__(
         self,
         text: str,
-        char_dimensions: Tuple[float, float],
         font: Font,
+        font_size: float,
+        bbox: tuple[float, float] | None = None,
+        scale_to_fit: bool = False,
     ) -> None:
         super().__init__()
 
         led_layout = FontLayout(
             font=font,
             text=text,
-            char_dimensions=char_dimensions,
-            resolution=(0.33, 0.35),
-            # bbox=(10, 14),
-            kerning=5,
+            font_size=font_size,
+            density=0.2,
+            bbox=bbox,
+            scale_to_fit=scale_to_fit,
         )
 
         num_leds = led_layout.get_count()
-        self.char_dimension = char_dimensions
 
         class _IFs(Module.IFS()):
             power = ElectricPower()
@@ -53,9 +51,7 @@ class LEDText(Module):
 
         self.NODEs = _NODES(self)
 
-        class _PARAMs(Module.PARAMS()):
-            width = Constant(char_dimensions[0] * len(text))
-            height = Constant(char_dimensions[1])
+        class _PARAMs(Module.PARAMS()): ...
 
         self.PARAMs = _PARAMs(self)
 
