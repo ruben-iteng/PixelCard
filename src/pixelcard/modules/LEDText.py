@@ -31,7 +31,7 @@ class LEDText(Module):
             font=font,
             text=text,
             font_size=font_size,
-            density=0.2,
+            density=0.13,
             bbox=bbox,
             scale_to_fit=scale_to_fit,
         )
@@ -56,7 +56,6 @@ class LEDText(Module):
         self.PARAMs = _PARAMs(self)
 
         for led in self.NODEs.leds:
-            # TODO reenable
             led.IFs.power.connect(self.IFs.power)
             # Parametrize
             led.NODEs.led.PARAMs.color.merge(LED.Color.RED)

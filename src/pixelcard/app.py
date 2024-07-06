@@ -30,7 +30,7 @@ class PixelCard(Module):
             "font": font,
             "font_size": 20,
             "bbox": (85.6 - text_margin * 2, 53.98 - text_margin * 2),
-            "scale_to_fit": True,
+            "scale_to_fit": False,
             "pcb_offset": (text_margin, text_margin),
         }
 
@@ -43,7 +43,7 @@ class PixelCard(Module):
                 font=self.font_settings["font"],
                 font_size=self.font_settings["font_size"],
                 bbox=self.font_settings["bbox"],
-                scale_to_fit=True,
+                scale_to_fit=self.font_settings["scale_to_fit"],
             )
             usb_psu = USB_C_5V_PSU_16p_Receptical()
             faebryk_logo = Faebryk_Logo()
