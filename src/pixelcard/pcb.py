@@ -2,9 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 import logging
-from pathlib import Path
 
-from faebryk.core.graph import Graph
 from faebryk.core.util import (
     get_all_nodes,
     get_first_child_of_type,
@@ -24,9 +22,8 @@ from faebryk.library.has_pcb_routing_strategy_manual import (
 from faebryk.library.has_pcb_routing_strategy_via_to_layer import (
     has_pcb_routing_strategy_via_to_layer,
 )
-from faebryk.libs.app.pcb import apply_layouts, apply_routing
 from faebryk.libs.font import Font as Ffont
-from faebryk.libs.kicad.pcb import PCB, At, Font
+from faebryk.libs.kicad.pcb import At, Font
 from pixelcard.app import PixelCard
 from pixelcard.library.Faebryk_Logo import Faebryk_Logo
 from pixelcard.modules.LEDText import LEDText
@@ -40,10 +37,9 @@ E.g placing components, layer switching, mass renaming, etc.
 """
 
 
-def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
-    logger.info("Load PCB")
-    pcb = PCB.load(pcb_file)
-    transformer = PCB_Transformer(pcb, graph, app)
+def transform_pcb(transformer: PCB_Transformer):
+    app = transformer.app
+    assert isinstance(app, PixelCard)
 
     # create pcb outline in shape of a credit card
     creditcard_width = 85.6
@@ -226,12 +222,3 @@ def transform_pcb(pcb_file: Path, graph: Graph, app: PixelCard):
     )
     # set coordinate system
     app.add_trait(has_pcb_position_defined(Point((0, 0, 0, L.TOP_LAYER))))
-
-    # apply layout
-    apply_layouts(app)
-    transformer.move_footprints()
-
-    apply_routing(app, transformer)
-
-    logger.info(f"Writing pcbfile {pcb_file}")
-    pcb.dump(pcb_file)
